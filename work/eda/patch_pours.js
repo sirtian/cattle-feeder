@@ -1,0 +1,10 @@
+const made = [];
+const p37 = eda.pcb_MathPolygon.createPolygon(['R', -5560, 1520, 170, 160, 0, 0]);
+made.push(await eda.pcb_PrimitivePour.create('GND', 1, p37, 'solid', false, 'GND_U37', 5, 10, false));
+const p33 = eda.MathPolygon ? null : null;
+const p33b = eda.pcb_MathPolygon.createPolygon(['R', -4380, 2400, 140, 360, 0, 0]);
+made.push(await eda.pcb_PrimitivePour.create('GND', 1, p33b, 'solid', false, 'GND_U33', 5, 10, false));
+made.push(await eda.pcb_PrimitiveVia.create('GND', -5456, 1604, 12.2, 24));
+made.push(await eda.pcb_PrimitiveVia.create('GND', -4316, 2478, 12.2, 24));
+for (const m of made) if (m && m.rebuildCopperRegion) await m.rebuildCopperRegion();
+return { created: made.filter(Boolean).length };

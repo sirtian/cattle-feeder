@@ -1,0 +1,480 @@
+{
+ "add_components": [
+  {
+   "designator": "U40",
+   "value": "SC16IS752",
+   "block_name": "Dual UART",
+   "search_query": "SC16IS752",
+   "part_uuid": "fc7de2f52c254a80934f617f7fc58ca3",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "#RTSA",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "2",
+     "name": "#CTSA",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "3",
+     "name": "TXA",
+     "signal_name": "BMS_TX"
+    },
+    {
+     "pin_number": "4",
+     "name": "RXA",
+     "signal_name": "BMS_RX"
+    },
+    {
+     "pin_number": "5",
+     "name": "#RESET",
+     "signal_name": "RST_SC"
+    },
+    {
+     "pin_number": "6",
+     "name": "XTAL1",
+     "signal_name": "CLK_SC"
+    },
+    {
+     "pin_number": "7",
+     "name": "XTAL2",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "8",
+     "name": "VDD",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "9",
+     "name": "I2C[SPI]",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "10",
+     "name": "A0",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "11",
+     "name": "A1",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "12",
+     "name": "N.C.",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "13",
+     "name": "SCL",
+     "signal_name": "I2C_SCL"
+    },
+    {
+     "pin_number": "14",
+     "name": "SDA",
+     "signal_name": "I2C_SDA"
+    },
+    {
+     "pin_number": "15",
+     "name": "IRQ#",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "16",
+     "name": "CTSB#",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "17",
+     "name": "RTSB#",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "18",
+     "name": "GPIO0",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "19",
+     "name": "GPIO1",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "20",
+     "name": "GPIO2",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "21",
+     "name": "GPIO3",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "22",
+     "name": "VSS",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "23",
+     "name": "TXB",
+     "signal_name": "CHG_TX"
+    },
+    {
+     "pin_number": "24",
+     "name": "RXB",
+     "signal_name": "CHG_RX"
+    },
+    {
+     "pin_number": "25",
+     "name": "GPIO4",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "26",
+     "name": "GPIO5",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "27",
+     "name": "GPIO6",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "28",
+     "name": "GPIO7",
+     "signal_name": ""
+    }
+   ]
+  },
+  {
+   "designator": "Y40",
+   "value": "1.8432MHz",
+   "block_name": "Dual UART",
+   "search_query": "1.8432MHz",
+   "part_uuid": "d382bfc7bbac4c62b7d590e91174d7a6",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "tri",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "OUT",
+     "signal_name": "CLK_SC"
+    },
+    {
+     "pin_number": "4",
+     "name": "VCC",
+     "signal_name": "3V3"
+    }
+   ]
+  },
+  {
+   "designator": "U41",
+   "value": "MAX13487E",
+   "block_name": "RS485",
+   "search_query": "MAX13487E",
+   "part_uuid": "1225b353c504484cbccab130b00dbc8b",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "RO",
+     "signal_name": "BMS_RX"
+    },
+    {
+     "pin_number": "2",
+     "name": "RE#",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "SHDN#",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "4",
+     "name": "DI",
+     "signal_name": "BMS_TX"
+    },
+    {
+     "pin_number": "5",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "6",
+     "name": "A",
+     "signal_name": "BMS_A"
+    },
+    {
+     "pin_number": "7",
+     "name": "B",
+     "signal_name": "BMS_B"
+    },
+    {
+     "pin_number": "8",
+     "name": "VCC",
+     "signal_name": "3V3"
+    }
+   ]
+  },
+  {
+   "designator": "U42",
+   "value": "MAX13487E",
+   "block_name": "RS485",
+   "search_query": "MAX13487E",
+   "part_uuid": "1225b353c504484cbccab130b00dbc8b",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "RO",
+     "signal_name": "CHG_RX"
+    },
+    {
+     "pin_number": "2",
+     "name": "RE#",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "SHDN#",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "4",
+     "name": "DI",
+     "signal_name": "CHG_TX"
+    },
+    {
+     "pin_number": "5",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "6",
+     "name": "A",
+     "signal_name": "CHG_A"
+    },
+    {
+     "pin_number": "7",
+     "name": "B",
+     "signal_name": "CHG_B"
+    },
+    {
+     "pin_number": "8",
+     "name": "VCC",
+     "signal_name": "3V3"
+    }
+   ]
+  },
+  {
+   "designator": "J40",
+   "value": "KF128-3P",
+   "block_name": "Terminals",
+   "search_query": "KF128-3P",
+   "part_uuid": "ef1108a0c58944848a8cc2eb5b64dcb4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "BMS_A"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "BMS_B"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J41",
+   "value": "KF128-3P",
+   "block_name": "Terminals",
+   "search_query": "KF128-3P",
+   "part_uuid": "ef1108a0c58944848a8cc2eb5b64dcb4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "CHG_A"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "CHG_B"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "R90",
+   "value": "120R",
+   "block_name": "RS485",
+   "search_query": "120R",
+   "part_uuid": "70ad7c7d259c46308522db94f14f808c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "BMS_A"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "BMS_B"
+    }
+   ]
+  },
+  {
+   "designator": "R91",
+   "value": "120R",
+   "block_name": "RS485",
+   "search_query": "120R",
+   "part_uuid": "70ad7c7d259c46308522db94f14f808c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "CHG_A"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "CHG_B"
+    }
+   ]
+  },
+  {
+   "designator": "D40",
+   "value": "SMBJ6.5CA",
+   "block_name": "RS485",
+   "search_query": "SMBJ6.5CA",
+   "part_uuid": "e4babe4b88d645b1809066f7a7e4fc75",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "BMS_A"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "BMS_B"
+    }
+   ]
+  },
+  {
+   "designator": "D41",
+   "value": "SMBJ6.5CA",
+   "block_name": "RS485",
+   "search_query": "SMBJ6.5CA",
+   "part_uuid": "e4babe4b88d645b1809066f7a7e4fc75",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "CHG_A"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "CHG_B"
+    }
+   ]
+  },
+  {
+   "designator": "R92",
+   "value": "10k",
+   "block_name": "Dual UART",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "RST_SC"
+    }
+   ]
+  },
+  {
+   "designator": "C90",
+   "value": "100nF",
+   "block_name": "Dual UART",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "RST_SC"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C91",
+   "value": "10uF",
+   "block_name": "Dual UART",
+   "search_query": "10uF",
+   "part_uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C92",
+   "value": "100nF",
+   "block_name": "Dual UART",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  }
+ ]
+}

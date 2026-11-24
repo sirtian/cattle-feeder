@@ -1,0 +1,208 @@
+[
+  {
+    "name": "Connection Error",
+    "violation_count": 161,
+    "truncated": true,
+    "list": [
+      {
+        "name": "GND",
+        "violation_count": 161,
+        "truncated": true,
+        "list": [
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "50abfd8fd9b83308"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "d176ede92872738e"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "06ce398161d9ac80"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "c8b26cec344479ca"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "6f627eead221c499"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "81e5d9660ae3a420"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "97657cc3607888da"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "d19a02feba693ada"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "57592b7ae549a0b1"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "b92365d6f1d70612"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "56a0c58eb71c2a44"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "7585d8dd25ba2f9d"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "307fd9fb31ab8213"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "23e0f47d741e0a25"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "2fca7b621dbce2da"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "781ada5430c2b250"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "04e4ad4bae829631"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "c6ff4ba84d6a67e9"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "b46f95a5938407fe"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "393e94685459679d"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "cf0af111e45548e7"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "f9cf742414fa88eb"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "df861962e850026f"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e20",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "d8fada2daab12327"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      }
+    ]
+  }
+]

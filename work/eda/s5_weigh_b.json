@@ -1,0 +1,187 @@
+{
+ "add_components": [
+  {
+   "designator": "J31",
+   "value": "KF128-4P",
+   "block_name": "Terminals",
+   "search_query": "KF128-4P",
+   "part_uuid": "e2b52e96898243feb9ae815fb2df58b4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "AIN0_F"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "AIN1_F"
+    }
+   ]
+  },
+  {
+   "designator": "J32",
+   "value": "KF128-4P",
+   "block_name": "Terminals",
+   "search_query": "KF128-4P",
+   "part_uuid": "e2b52e96898243feb9ae815fb2df58b4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "AIN0_F"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "AIN1_F"
+    }
+   ]
+  },
+  {
+   "designator": "J33",
+   "value": "KF128-4P",
+   "block_name": "Terminals",
+   "search_query": "KF128-4P",
+   "part_uuid": "e2b52e96898243feb9ae815fb2df58b4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "AIN2_F"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "AIN3_F"
+    }
+   ]
+  },
+  {
+   "designator": "J34",
+   "value": "KF128-4P",
+   "block_name": "Terminals",
+   "search_query": "KF128-4P",
+   "part_uuid": "e2b52e96898243feb9ae815fb2df58b4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "AIN2_F"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "AIN3_F"
+    }
+   ]
+  },
+  {
+   "designator": "J35",
+   "value": "KF128-4P",
+   "block_name": "Terminals",
+   "search_query": "KF128-4P",
+   "part_uuid": "e2b52e96898243feb9ae815fb2df58b4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "AIN2_F"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "AIN3_F"
+    }
+   ]
+  },
+  {
+   "designator": "C71",
+   "value": "100nF",
+   "block_name": "Terminals",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_SENSE"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C72",
+   "value": "100nF",
+   "block_name": "Terminals",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "48V_SENSE"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"add_components": [{"designator": "R10", "value": "2.2k", "block_name": "Test", "search_query": "2.2k", "part_uuid": "a5af5fd5005a45819ff0ab771881db3d", "pins": [{"pin_number": "1", "name": "1", "signal_name": "TEST_A"}, {"pin_number": "2", "name": "2", "signal_name": "TEST_B"}]}]}

@@ -1,0 +1,382 @@
+{
+ "add_components": [
+  {
+   "designator": "U43",
+   "value": "MAX13487E",
+   "block_name": "RS485 Driver",
+   "search_query": "MAX13487E",
+   "part_uuid": "1225b353c504484cbccab130b00dbc8b",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "RO",
+     "signal_name": "RS485_RX"
+    },
+    {
+     "pin_number": "2",
+     "name": "RE#",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "SHDN#",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "4",
+     "name": "DI",
+     "signal_name": "RS485_TX"
+    },
+    {
+     "pin_number": "5",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "6",
+     "name": "A",
+     "signal_name": "DRV_A"
+    },
+    {
+     "pin_number": "7",
+     "name": "B",
+     "signal_name": "DRV_B"
+    },
+    {
+     "pin_number": "8",
+     "name": "VCC",
+     "signal_name": "3V3"
+    }
+   ]
+  },
+  {
+   "designator": "J42",
+   "value": "KF128-3P",
+   "block_name": "RS485 Driver",
+   "search_query": "KF128-3P",
+   "part_uuid": "ef1108a0c58944848a8cc2eb5b64dcb4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DRV_A"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "DRV_B"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "R93",
+   "value": "120R",
+   "block_name": "RS485 Driver",
+   "search_query": "120R",
+   "part_uuid": "70ad7c7d259c46308522db94f14f808c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DRV_A"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "DRV_B"
+    }
+   ]
+  },
+  {
+   "designator": "D42",
+   "value": "SMBJ6.5CA",
+   "block_name": "RS485 Driver",
+   "search_query": "SMBJ6.5CA",
+   "part_uuid": "e4babe4b88d645b1809066f7a7e4fc75",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DRV_A"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "DRV_B"
+    }
+   ]
+  },
+  {
+   "designator": "U44",
+   "value": "DS3231MZ",
+   "block_name": "RTC",
+   "search_query": "DS3231MZ",
+   "part_uuid": "360bc2688b804e33a1d050628c2a7994",
+   "pins": [
+    {
+     "pin_number": "8",
+     "name": "SCL",
+     "signal_name": "I2C_SCL"
+    },
+    {
+     "pin_number": "7",
+     "name": "SDA",
+     "signal_name": "I2C_SDA"
+    },
+    {
+     "pin_number": "1",
+     "name": "32KHZ",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "3",
+     "name": "INT#/SQW",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "4",
+     "name": "RST#",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "6",
+     "name": "VBAT",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "5",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "2",
+     "name": "VCC",
+     "signal_name": "3V3"
+    }
+   ]
+  },
+  {
+   "designator": "U45",
+   "value": "TPL5010",
+   "block_name": "Watchdog",
+   "search_query": "TPL5010",
+   "part_uuid": "66c1866589fe4fe9a09358f12110aef5",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "VDD",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "DELAY/M_RST",
+     "signal_name": "WDT_DELAY"
+    },
+    {
+     "pin_number": "4",
+     "name": "DONE",
+     "signal_name": "WDT_KICK"
+    },
+    {
+     "pin_number": "5",
+     "name": "WAKE",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "6",
+     "name": "RSTn",
+     "signal_name": "RST_MCP"
+    }
+   ]
+  },
+  {
+   "designator": "R94",
+   "value": "100k",
+   "block_name": "Watchdog",
+   "search_query": "100k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "WDT_DELAY"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J43",
+   "value": "TF-01A",
+   "block_name": "SD",
+   "search_query": "TF-01A",
+   "part_uuid": "9594afeee76d4cf38ea1aabc6bd23cca",
+   "pins": [
+    {
+     "pin_number": "4",
+     "name": "VDD",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "6",
+     "name": "VSS",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "2",
+     "name": "CDDAT3(CS)",
+     "signal_name": "SD_CS"
+    },
+    {
+     "pin_number": "3",
+     "name": "CMD(DI)",
+     "signal_name": "SPI_MOSI"
+    },
+    {
+     "pin_number": "5",
+     "name": "CLK(SCLK)",
+     "signal_name": "SPI_SCK"
+    },
+    {
+     "pin_number": "7",
+     "name": "DAT0(D0)",
+     "signal_name": "SPI_MISO"
+    },
+    {
+     "pin_number": "1",
+     "name": "DAT2",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "8",
+     "name": "DAT1",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "9",
+     "name": "CD",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "10",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "11",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "12",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "13",
+     "name": "GND",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J44",
+   "value": "KF128-4P",
+   "block_name": "HMI",
+   "search_query": "KF128-4P",
+   "part_uuid": "e2b52e96898243feb9ae815fb2df58b4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "HMI_TX"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "HMI_RX"
+    }
+   ]
+  },
+  {
+   "designator": "C93",
+   "value": "100nF",
+   "block_name": "Decoupling",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C94",
+   "value": "10uF",
+   "block_name": "Decoupling",
+   "search_query": "10uF",
+   "part_uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C95",
+   "value": "100nF",
+   "block_name": "Decoupling",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Connection Error",
+    "violation_count": 10,
+    "list": [
+      {
+        "name": "GND",
+        "violation_count": 10,
+        "list": [
+          {
+            "obj1": "(GND): U37_3",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "dbdac3bfaf0639ffe62"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U37_5",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "dbdac3bfaf0639ffe64"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e2022",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "e159936669095146"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U4_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "7f189ad019b517a2e8"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): C80_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "f3db4df1833d9a5de17"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): C81_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "5a3f6ae4f24dec2be17"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U37_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "dbdac3bfaf0639ffe61"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e3973",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "bb58f69c0e9df68b"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U33_17",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "d222a9a4cb6284e3e85"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U33_10",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "d222a9a4cb6284e3e69"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+const vs = await eda.pcb_PrimitiveVia.getAll();
+const kill = vs.filter(v => v.getState_Net()==='GND' && Math.abs(v.getState_X()+1931.4)<2 && Math.abs(v.getState_Y()-1123.9)<2).map(v=>v.getState_PrimitiveId());
+if (kill.length) await eda.pcb_PrimitiveVia.delete(kill);
+const lines = await eda.pcb_PrimitiveLine.getAll();
+const killL = lines.filter(l => l.getState_Net()==='GND' && Math.abs(l.getState_StartX()+1931.4)<2 && Math.abs(l.getState_StartY()-1118.9)<2).map(l=>l.getState_PrimitiveId());
+if (killL.length) await eda.pcb_PrimitiveLine.delete(killL);
+const made=[];
+made.push(await eda.pcb_PrimitiveLine.create('GND', 1, -1931.4, 1118.9, -1931.4, 1150, 10, false));
+made.push(await eda.pcb_PrimitiveVia.create('GND', -1931.4, 1150, 12.2, 24));
+return { killedV: kill.length, killedL: killL.length, created: made.filter(Boolean).length };

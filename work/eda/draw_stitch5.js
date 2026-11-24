@@ -1,0 +1,14 @@
+const W=8, VIA_H=12.2, VIA_D=24;
+const made=[];
+await eda.pcb_PrimitiveVia.delete(['4c083bf3a2761dd6','ec1a14e2ffe46a84','c79a5a5c23ed4589','396a5c56c3d15e21','e6d12b711a2019cf','50ef90866c45f19b']);
+made.push(await eda.pcb_PrimitiveLine.create("GND", 1, -5451.6, 1550.7, -5382.8, 1452.4, W, false));
+made.push(await eda.pcb_PrimitiveVia.create("GND", -5382.8, 1452.4, VIA_H, VIA_D));
+made.push(await eda.pcb_PrimitiveLine.create("GND", 1, -5681.9, 1278.7, -5677.1, 1333.5, W, false));
+made.push(await eda.pcb_PrimitiveVia.create("GND", -5677.1, 1333.5, VIA_H, VIA_D));
+made.push(await eda.pcb_PrimitiveLine.create("GND", 1, -2384.1, 979.2, -2394.4, 951.0, W, false));
+made.push(await eda.pcb_PrimitiveVia.create("GND", -2394.4, 951.0, VIA_H, VIA_D));
+made.push(await eda.pcb_PrimitiveLine.create("GND", 1, -5060.6, 1330.6, -5073.6, 1256.7, W, false));
+made.push(await eda.pcb_PrimitiveVia.create("GND", -5073.6, 1256.7, VIA_H, VIA_D));
+made.push(await eda.pcb_PrimitiveLine.create("GND", 1, 3859.7, 1052.1, 3870.0, 1023.9, W, false));
+made.push(await eda.pcb_PrimitiveVia.create("GND", 3870.0, 1023.9, VIA_H, VIA_D));
+return { created: made.filter(Boolean).length };

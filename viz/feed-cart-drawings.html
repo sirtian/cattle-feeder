@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>远程控制投料车 · 设计图纸（A3 × 4）</title>
+<style>
+  :root{
+    --ink:#1e2933; --muted:#5b6b76; --line:#c9d4dc;
+    --bg:#e7ecef; --accent:#2d6b88;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Microsoft YaHei","Noto Sans SC","PingFang SC",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .toolbar{
+    position:sticky; top:0; z-index:10;
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    padding:14px 28px; background:rgba(255,255,255,.92);
+    border-bottom:1px solid var(--line); backdrop-filter:blur(8px);
+  }
+  .toolbar h1{font-size:16px; margin:0; letter-spacing:.4px}
+  .toolbar h1 span{color:var(--muted); font-weight:400; margin-left:8px; font-size:13px}
+  .toolbar .spacer{flex:1}
+  .btn{
+    appearance:none; border:1px solid var(--accent); background:var(--accent);
+    color:#fff; padding:7px 14px; border-radius:6px; font-size:13px; cursor:pointer;
+    font-family:inherit;
+  }
+  .btn.ghost{background:#fff; color:var(--accent)}
+  .btn:hover{filter:brightness(1.06)}
+  .hint{font-size:12px; color:var(--muted)}
+  main{padding:10mm 0 16mm}
+  .sheet{
+    width:420mm; height:297mm; margin:0 auto 8mm;
+    background:#fff; box-shadow:0 1.5mm 5mm rgba(20,40,55,.22);
+    overflow:hidden;
+  }
+  .sheet img{display:block; width:100%; height:100%}
+  .cap{
+    width:420mm; margin:-4mm auto 10mm; padding:0 2mm;
+    font-size:11px; color:var(--muted); display:flex; justify-content:space-between;
+  }
+  @page{size:A3 landscape; margin:0}
+  @media print{
+    body{background:#fff}
+    .toolbar,.cap{display:none}
+    main{padding:0}
+    .sheet{margin:0; box-shadow:none; page-break-after:always; break-after:page}
+    .sheet:last-of-type{page-break-after:auto; break-after:auto}
+  }
+</style>
+</head>
+<body>
+  <div class="toolbar">
+    <h1>远程控制投料车 · 设计图纸<span>A3 横版 · 第一角投影 · 4 张</span></h1>
+    <div class="spacer"></div>
+    <span class="hint">打印：A3 横向 / 实际大小 / 无页边距</span>
+    <button class="btn" onclick="window.print()">打印 / 导出 PDF</button>
+    <a class="btn ghost" href="feed-cart-p10.html">10 头原型图纸</a>
+    <a class="btn ghost" href="feed-cart-3d.html">打开 3D 演示</a>
+  </div>
+
+  <main id="sheets">
+    <section class="sheet"><img src="drawings/01-general.svg" alt="FC-01 总图"></section>
+    <div class="cap"><span>FC-01 总图 · 侧视 / 俯视 / 前视 · 1:20</span><span>第 1 / 4 张</span></div>
+
+    <section class="sheet"><img src="drawings/02-discharge.svg" alt="FC-02 粗料箱与卸料机构"></section>
+    <div class="cap"><span>FC-02 粗料箱与卸料机构 · B-B / A-A / 详图 C</span><span>第 2 / 4 张</span></div>
+
+    <section class="sheet"><img src="drawings/03-chassis.svg" alt="FC-03 精料仓、底盘与轴荷"></section>
+    <div class="cap"><span>FC-03 精料仓、底盘与轴荷 · D-D / E-E</span><span>第 3 / 4 张</span></div>
+
+    <section class="sheet"><img src="drawings/04-electrical.svg" alt="FC-04 电气、安全与明细表"></section>
+    <div class="cap"><span>FC-04 电气、安全与明细表</span><span>第 4 / 4 张</span></div>
+  </main>
+</body>
+</html>

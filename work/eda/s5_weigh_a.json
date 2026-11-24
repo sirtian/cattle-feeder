@@ -1,0 +1,515 @@
+{
+ "add_components": [
+  {
+   "designator": "U40",
+   "value": "ADS1256",
+   "block_name": "ADC",
+   "search_query": "ADS1256",
+   "part_uuid": "dbec33b8e5e24d91917d18d3828a5384",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "AVDD",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "AGND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "VREFN",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "VREFP",
+     "signal_name": "VREF"
+    },
+    {
+     "pin_number": "5",
+     "name": "AINCOM",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "6",
+     "name": "AIN0",
+     "signal_name": "AIN0"
+    },
+    {
+     "pin_number": "7",
+     "name": "AIN1",
+     "signal_name": "AIN1"
+    },
+    {
+     "pin_number": "8",
+     "name": "AIN2",
+     "signal_name": "AIN2"
+    },
+    {
+     "pin_number": "9",
+     "name": "AIN3",
+     "signal_name": "AIN3"
+    },
+    {
+     "pin_number": "10",
+     "name": "AIN4",
+     "signal_name": "24V_SENSE"
+    },
+    {
+     "pin_number": "11",
+     "name": "AIN5",
+     "signal_name": "48V_SENSE"
+    },
+    {
+     "pin_number": "12",
+     "name": "AIN6",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "13",
+     "name": "AIN7",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "14",
+     "name": "SYNC#",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "15",
+     "name": "RESET#",
+     "signal_name": "RST_ADC"
+    },
+    {
+     "pin_number": "16",
+     "name": "DVDD",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "17",
+     "name": "DGND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "18",
+     "name": "XTAL2",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "19",
+     "name": "XTAL1CLKIN",
+     "signal_name": "CLK_ADC"
+    },
+    {
+     "pin_number": "20",
+     "name": "CS#",
+     "signal_name": "SPI_CS_ADC"
+    },
+    {
+     "pin_number": "21",
+     "name": "DRDY#",
+     "signal_name": "ADS_DRDY"
+    },
+    {
+     "pin_number": "22",
+     "name": "DOUT",
+     "signal_name": "SPI_MISO"
+    },
+    {
+     "pin_number": "23",
+     "name": "DIN",
+     "signal_name": "SPI_MOSI"
+    },
+    {
+     "pin_number": "24",
+     "name": "SCLK",
+     "signal_name": "SPI_SCK"
+    },
+    {
+     "pin_number": "25",
+     "name": "D0CLKOUT",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "26",
+     "name": "D1",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "27",
+     "name": "D2",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "28",
+     "name": "D3",
+     "signal_name": ""
+    }
+   ]
+  },
+  {
+   "designator": "Y1",
+   "value": "7.68MHz",
+   "block_name": "ADC",
+   "search_query": "7.68MHz",
+   "part_uuid": "3e833eb6beb543d6a29522956073fcb9",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "OE/NC",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "OUT",
+     "signal_name": "CLK_ADC"
+    },
+    {
+     "pin_number": "4",
+     "name": "VCC",
+     "signal_name": "3V3"
+    }
+   ]
+  },
+  {
+   "designator": "R80",
+   "value": "1k",
+   "block_name": "Filters",
+   "search_query": "1k",
+   "part_uuid": "65abbad5fa864933b552e0f016ece0db",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "AIN0_F"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "AIN0"
+    }
+   ]
+  },
+  {
+   "designator": "R81",
+   "value": "1k",
+   "block_name": "Filters",
+   "search_query": "1k",
+   "part_uuid": "65abbad5fa864933b552e0f016ece0db",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "AIN1_F"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "AIN1"
+    }
+   ]
+  },
+  {
+   "designator": "R82",
+   "value": "1k",
+   "block_name": "Filters",
+   "search_query": "1k",
+   "part_uuid": "65abbad5fa864933b552e0f016ece0db",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "AIN2_F"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "AIN2"
+    }
+   ]
+  },
+  {
+   "designator": "R83",
+   "value": "1k",
+   "block_name": "Filters",
+   "search_query": "1k",
+   "part_uuid": "65abbad5fa864933b552e0f016ece0db",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "AIN3_F"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "AIN3"
+    }
+   ]
+  },
+  {
+   "designator": "R84",
+   "value": "10k",
+   "block_name": "ADC",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "RST_ADC"
+    }
+   ]
+  },
+  {
+   "designator": "C60",
+   "value": "10uF",
+   "block_name": "Filters",
+   "search_query": "10uF",
+   "part_uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C61",
+   "value": "100nF",
+   "block_name": "Filters",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C62",
+   "value": "10uF",
+   "block_name": "Filters",
+   "search_query": "10uF",
+   "part_uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C63",
+   "value": "100nF",
+   "block_name": "Filters",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C64",
+   "value": "1uF",
+   "block_name": "Filters",
+   "search_query": "1uF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "VREF"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C65",
+   "value": "100nF",
+   "block_name": "Filters",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "VREF"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C66",
+   "value": "100nF",
+   "block_name": "Filters",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "AIN0"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C67",
+   "value": "100nF",
+   "block_name": "Filters",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "AIN1"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C68",
+   "value": "100nF",
+   "block_name": "Filters",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "AIN2"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C69",
+   "value": "100nF",
+   "block_name": "Filters",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "AIN3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C70",
+   "value": "100nF",
+   "block_name": "Filters",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "RST_ADC"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J30",
+   "value": "KF128-4P",
+   "block_name": "Terminals",
+   "search_query": "KF128-4P",
+   "part_uuid": "e2b52e96898243feb9ae815fb2df58b4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "AIN0_F"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "AIN1_F"
+    }
+   ]
+  }
+ ]
+}

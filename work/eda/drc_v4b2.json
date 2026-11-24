@@ -1,0 +1,11 @@
+{
+  "checkpoint": null,
+  "result": {
+    "error": {
+      "phase": "transport",
+      "message": "Timeout waiting EasyEDA event: execute-js Execution/checkpoint completion is unconfirmed. A timeout or disconnect does not stop JavaScript. Do not automatically retry."
+    }
+  },
+  "artifacts": [],
+  "operation_id": "mutation:9b10e6b1"
+}

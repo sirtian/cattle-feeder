@@ -1,0 +1,196 @@
+[
+  {
+    "name": "Clearance Error",
+    "violation_count": 19,
+    "truncated": true,
+    "list": [
+      {
+        "name": "Track to Track",
+        "violation_count": 8,
+        "truncated": true,
+        "list": [
+          {
+            "obj1": "(48V_SENSE): e-1",
+            "obj2": "(GND): e6253",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "bc7fcdaf0e424e87",
+              "b799b39dc8488cb4"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(48V_SENSE): e-1",
+            "obj2": "(GND): e6253",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "c22cd953b542e369",
+              "b799b39dc8488cb4"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(GND): e6253",
+            "obj2": "(48V_SENSE): e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "b799b39dc8488cb4",
+              "8f1884d1e50651f0"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "Track to Via",
+        "violation_count": 2,
+        "list": [
+          {
+            "obj1": "(COIL2_1): e-1",
+            "obj2": "(GND): e7157",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "417b3f3266dd9d7f",
+              "3c148069cc506445"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(GND): e6258",
+            "obj2": "(MCP_P14): e5816",
+            "message": "Object 1 to object 2 distance is 3.9mil, should be >= 5mil",
+            "primitive_ids": [
+              "2baa93b96943b7b2",
+              "11c0fc3e01ca19b5"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "Hole to Track",
+        "violation_count": 1,
+        "list": [
+          {
+            "obj1": "(COIL2_1): e-1",
+            "obj2": "(GND): e7157",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "417b3f3266dd9d7f",
+              "3c148069cc506445"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "SMD Pad to TH Pad",
+        "violation_count": 1,
+        "list": [
+          {
+            "obj1": "(GND): C1_2",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "774ed45f71984337e9",
+              "4da14b9722521f76"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "Hole to Hole",
+        "violation_count": 4,
+        "truncated": true,
+        "list": [
+          {
+            "obj1": ": e-1",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "eeffb278153e5684",
+              "dad171fd49dff3da"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          },
+          {
+            "obj1": ": e-1",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "951419ceb5ecae09",
+              "33299b7e09969a95"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          },
+          {
+            "obj1": ": e-1",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "fac132f71571a6b1",
+              "5f450bab454a1933"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          }
+        ]
+      },
+      {
+        "name": "TH Pad to TH Pad",
+        "violation_count": 2,
+        "list": [
+          {
+            "obj1": "(24V_P): K15_1",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "17ca1935c099cd26e26",
+              "14a72dd39908ce89"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(COIL2_2): K15_2",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "17ca1935c099cd26e27",
+              "14a72dd39908ce89"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "Hole to TH Pad",
+        "violation_count": 1,
+        "list": [
+          {
+            "obj1": "(COIL2_2): K15_2",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 4.2mil, should be >= 5mil",
+            "primitive_ids": [
+              "17ca1935c099cd26e27",
+              "14a72dd39908ce89"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      }
+    ]
+  }
+]

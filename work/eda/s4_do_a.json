@@ -1,0 +1,569 @@
+{
+ "add_components": [
+  {
+   "designator": "U30",
+   "value": "MCP23017",
+   "block_name": "IO Expander",
+   "search_query": "MCP23017",
+   "part_uuid": "7962d1ccd186435689af19a1a573533a",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "GPB0",
+     "signal_name": "MCP_P10"
+    },
+    {
+     "pin_number": "2",
+     "name": "GPB1",
+     "signal_name": "MCP_P11"
+    },
+    {
+     "pin_number": "3",
+     "name": "GPB2",
+     "signal_name": "MCP_P12"
+    },
+    {
+     "pin_number": "4",
+     "name": "GPB3",
+     "signal_name": "MCP_P13"
+    },
+    {
+     "pin_number": "5",
+     "name": "GPB4",
+     "signal_name": "MCP_P14"
+    },
+    {
+     "pin_number": "6",
+     "name": "GPB5",
+     "signal_name": "MCP_P15"
+    },
+    {
+     "pin_number": "7",
+     "name": "GPB6",
+     "signal_name": "MCP_P16"
+    },
+    {
+     "pin_number": "8",
+     "name": "GPB7",
+     "signal_name": "MCP_P17"
+    },
+    {
+     "pin_number": "9",
+     "name": "VDD",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "10",
+     "name": "VSS",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "11",
+     "name": "NC",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "12",
+     "name": "SCK",
+     "signal_name": "I2C_SCL"
+    },
+    {
+     "pin_number": "13",
+     "name": "SDA",
+     "signal_name": "I2C_SDA"
+    },
+    {
+     "pin_number": "14",
+     "name": "NC",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "15",
+     "name": "A0",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "16",
+     "name": "A1",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "17",
+     "name": "A2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "18",
+     "name": "RESET#",
+     "signal_name": "RST_MCP"
+    },
+    {
+     "pin_number": "19",
+     "name": "INTB",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "20",
+     "name": "INTA",
+     "signal_name": "MCP_INT"
+    },
+    {
+     "pin_number": "21",
+     "name": "GPA0",
+     "signal_name": "MCP_DI7"
+    },
+    {
+     "pin_number": "22",
+     "name": "GPA1",
+     "signal_name": "MCP_DI8"
+    },
+    {
+     "pin_number": "23",
+     "name": "GPA2",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "24",
+     "name": "GPA3",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "25",
+     "name": "GPA4",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "26",
+     "name": "GPA5",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "27",
+     "name": "GPA6",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "28",
+     "name": "GPA7",
+     "signal_name": ""
+    }
+   ]
+  },
+  {
+   "designator": "U31",
+   "value": "ULN2803A",
+   "block_name": "Relay Driver",
+   "search_query": "ULN2803A",
+   "part_uuid": "700eaa4a90c64aaf9a2b11ef2fb571f5",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1B",
+     "signal_name": "MCP_P10"
+    },
+    {
+     "pin_number": "2",
+     "name": "2B",
+     "signal_name": "MCP_P11"
+    },
+    {
+     "pin_number": "3",
+     "name": "3B",
+     "signal_name": "MCP_P12"
+    },
+    {
+     "pin_number": "4",
+     "name": "4B",
+     "signal_name": "MCP_P13"
+    },
+    {
+     "pin_number": "5",
+     "name": "5B",
+     "signal_name": "MCP_P14"
+    },
+    {
+     "pin_number": "6",
+     "name": "6B",
+     "signal_name": "MCP_P15"
+    },
+    {
+     "pin_number": "7",
+     "name": "7B",
+     "signal_name": "MCP_P16"
+    },
+    {
+     "pin_number": "8",
+     "name": "8B",
+     "signal_name": "MCP_P17"
+    },
+    {
+     "pin_number": "9",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "10",
+     "name": "COM",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "11",
+     "name": "8C",
+     "signal_name": "COIL2_8"
+    },
+    {
+     "pin_number": "12",
+     "name": "7C",
+     "signal_name": "COIL2_7"
+    },
+    {
+     "pin_number": "13",
+     "name": "6C",
+     "signal_name": "COIL2_6"
+    },
+    {
+     "pin_number": "14",
+     "name": "5C",
+     "signal_name": "COIL2_5"
+    },
+    {
+     "pin_number": "15",
+     "name": "4C",
+     "signal_name": "COIL2_4"
+    },
+    {
+     "pin_number": "16",
+     "name": "3C",
+     "signal_name": "COIL2_3"
+    },
+    {
+     "pin_number": "17",
+     "name": "2C",
+     "signal_name": "COIL2_2"
+    },
+    {
+     "pin_number": "18",
+     "name": "1C",
+     "signal_name": "COIL2_1"
+    }
+   ]
+  },
+  {
+   "designator": "K1",
+   "value": "G5LE-1A4 DC24",
+   "block_name": "Relays",
+   "search_query": "G5LE-1A4 DC24",
+   "part_uuid": "47d46dd80c70494e8fde752a1a13bbb7",
+   "pins": [
+    {
+     "pin_number": "5",
+     "name": "COIL1",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "COIL2",
+     "signal_name": "COIL2_1"
+    },
+    {
+     "pin_number": "1",
+     "name": "MAIN",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "3",
+     "name": "NO",
+     "signal_name": "DO1"
+    }
+   ]
+  },
+  {
+   "designator": "K2",
+   "value": "G5LE-1A4 DC24",
+   "block_name": "Relays",
+   "search_query": "G5LE-1A4 DC24",
+   "part_uuid": "47d46dd80c70494e8fde752a1a13bbb7",
+   "pins": [
+    {
+     "pin_number": "5",
+     "name": "COIL1",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "COIL2",
+     "signal_name": "COIL2_2"
+    },
+    {
+     "pin_number": "1",
+     "name": "MAIN",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "3",
+     "name": "NO",
+     "signal_name": "DO2"
+    }
+   ]
+  },
+  {
+   "designator": "K3",
+   "value": "G5LE-1A4 DC24",
+   "block_name": "Relays",
+   "search_query": "G5LE-1A4 DC24",
+   "part_uuid": "47d46dd80c70494e8fde752a1a13bbb7",
+   "pins": [
+    {
+     "pin_number": "5",
+     "name": "COIL1",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "COIL2",
+     "signal_name": "COIL2_3"
+    },
+    {
+     "pin_number": "1",
+     "name": "MAIN",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "3",
+     "name": "NO",
+     "signal_name": "DO3"
+    }
+   ]
+  },
+  {
+   "designator": "K4",
+   "value": "G5LE-1A4 DC24",
+   "block_name": "Relays",
+   "search_query": "G5LE-1A4 DC24",
+   "part_uuid": "47d46dd80c70494e8fde752a1a13bbb7",
+   "pins": [
+    {
+     "pin_number": "5",
+     "name": "COIL1",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "COIL2",
+     "signal_name": "COIL2_4"
+    },
+    {
+     "pin_number": "1",
+     "name": "MAIN",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "3",
+     "name": "NO",
+     "signal_name": "DO4"
+    }
+   ]
+  },
+  {
+   "designator": "R60",
+   "value": "4.7k",
+   "block_name": "IO Expander",
+   "search_query": "4.7k",
+   "part_uuid": "9b2474b02bb94569a00ded395421ea45",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "I2C_SDA"
+    }
+   ]
+  },
+  {
+   "designator": "R61",
+   "value": "4.7k",
+   "block_name": "IO Expander",
+   "search_query": "4.7k",
+   "part_uuid": "9b2474b02bb94569a00ded395421ea45",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "I2C_SCL"
+    }
+   ]
+  },
+  {
+   "designator": "R62",
+   "value": "10k",
+   "block_name": "IO Expander",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "RST_MCP"
+    }
+   ]
+  },
+  {
+   "designator": "R63",
+   "value": "10k",
+   "block_name": "IO Expander",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "MCP_INT"
+    }
+   ]
+  },
+  {
+   "designator": "C50",
+   "value": "100nF",
+   "block_name": "IO Expander",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C51",
+   "value": "10uF",
+   "block_name": "IO Expander",
+   "search_query": "10uF",
+   "part_uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C52",
+   "value": "100nF",
+   "block_name": "IO Expander",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "RST_MCP"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J20",
+   "value": "KF128-5P",
+   "block_name": "Connectors",
+   "search_query": "KF128-5P",
+   "part_uuid": "34674860561a4d799c5c1cd606cb08eb",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DO1"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "DO2"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "5",
+     "name": "5",
+     "signal_name": "24V_P"
+    }
+   ]
+  },
+  {
+   "designator": "J21",
+   "value": "KF128-5P",
+   "block_name": "Connectors",
+   "search_query": "KF128-5P",
+   "part_uuid": "34674860561a4d799c5c1cd606cb08eb",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DO3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "DO4"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "5",
+     "name": "5",
+     "signal_name": "24V_P"
+    }
+   ]
+  }
+ ]
+}

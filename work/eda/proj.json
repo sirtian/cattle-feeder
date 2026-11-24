@@ -1,0 +1,80 @@
+{
+  "current_doc_uuid": "8fcdfd29943caadc",
+  "project_data": [
+    {
+      "name": "P10A-Main",
+      "itemType": "Board",
+      "schematic": {
+        "name": "P10A-Ctrl",
+        "itemType": "Schematic",
+        "page": [
+          {
+            "name": "S6-Comm-B",
+            "itemType": "Schematic Page",
+            "uuid": "8c354d5eae1bbe32"
+          },
+          {
+            "name": "S6-Comm-A",
+            "itemType": "Schematic Page",
+            "uuid": "759872967aa3b5cb"
+          },
+          {
+            "name": "S5-Weigh-B",
+            "itemType": "Schematic Page",
+            "uuid": "08397c5d14a242f4"
+          },
+          {
+            "name": "S5-Weigh-A2",
+            "itemType": "Schematic Page",
+            "uuid": "0b7398590d9c2a5f"
+          },
+          {
+            "name": "S3-DI-A",
+            "itemType": "Schematic Page",
+            "uuid": "afb83ddb25e3e4b7"
+          },
+          {
+            "name": "S2-MCU",
+            "itemType": "Schematic Page",
+            "uuid": "6c97c0447957829f"
+          },
+          {
+            "name": "S7-Conn",
+            "itemType": "Schematic Page",
+            "uuid": "b9e1eaf313dc9693"
+          },
+          {
+            "name": "S4-DO-B",
+            "itemType": "Schematic Page",
+            "uuid": "bb6698c947d6cd47"
+          },
+          {
+            "name": "S4-DO-A",
+            "itemType": "Schematic Page",
+            "uuid": "5ca3525e62395e65"
+          },
+          {
+            "name": "S3-DI-B",
+            "itemType": "Schematic Page",
+            "uuid": "750f84377228da8e"
+          },
+          {
+            "name": "S1-Power",
+            "itemType": "Schematic Page",
+            "uuid": "8fcdfd29943caadc"
+          }
+        ],
+        "uuid": "e9fb74f61b2aeb24"
+      },
+      "pcb": {
+        "name": "P10A-PCB",
+        "itemType": "PCB",
+        "uuid": "05e4ac670040a6fd",
+        "parentBoardName": "P10A-Main"
+      }
+    }
+  ],
+  "project_uuid": "ffd1283dd35949a9b4e3c1887040a91c",
+  "project_name": "P10-A 控制器载板",
+  "description": "ESP32-S3 controller carrier for the P10-A prototype: 24V input, 8DI/8DO, ADS1256 6-channel weighing, RS485 x2, BMS/charger, safety relay interface."
+}

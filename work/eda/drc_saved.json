@@ -1,0 +1,326 @@
+[
+  {
+    "name": "Clearance Error",
+    "violation_count": 8,
+    "list": [
+      {
+        "name": "SMD Pad to TH Pad",
+        "violation_count": 1,
+        "list": [
+          {
+            "obj1": "(GND): C1_2",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "774ed45f71984337e9",
+              "4da14b9722521f76"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "Hole to Hole",
+        "violation_count": 4,
+        "list": [
+          {
+            "obj1": ": e-1",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "eeffb278153e5684",
+              "dad171fd49dff3da"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          },
+          {
+            "obj1": ": e-1",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "951419ceb5ecae09",
+              "33299b7e09969a95"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          },
+          {
+            "obj1": ": e-1",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "fac132f71571a6b1",
+              "5f450bab454a1933"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          },
+          {
+            "obj1": ": e-1",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "d7167980c8492f67",
+              "90abddbd126e07bd"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          }
+        ]
+      },
+      {
+        "name": "TH Pad to TH Pad",
+        "violation_count": 2,
+        "list": [
+          {
+            "obj1": "(24V_P): K15_1",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "17ca1935c099cd26e26",
+              "14a72dd39908ce89"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(COIL2_2): K15_2",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "17ca1935c099cd26e27",
+              "14a72dd39908ce89"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "Hole to TH Pad",
+        "violation_count": 1,
+        "list": [
+          {
+            "obj1": "(COIL2_2): K15_2",
+            "obj2": ": e-1",
+            "message": "Object 1 to object 2 distance is 4.2mil, should be >= 5mil",
+            "primitive_ids": [
+              "17ca1935c099cd26e27",
+              "14a72dd39908ce89"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Connection Error",
+    "violation_count": 161,
+    "truncated": true,
+    "list": [
+      {
+        "name": "GND",
+        "violation_count": 161,
+        "truncated": true,
+        "list": [
+          {
+            "obj1": "(GND): e-1e2",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "50abfd8fd9b83308"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e5",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "d176ede92872738e"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e6",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "06ce398161d9ac80"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e7",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "c8b26cec344479ca"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e8",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "6f627eead221c499"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e9",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "81e5d9660ae3a420"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e11",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "97657cc3607888da"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e14",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "d19a02feba693ada"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e16",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "57592b7ae549a0b1"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e17",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "b92365d6f1d70612"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e18",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "56a0c58eb71c2a44"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e19",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "7585d8dd25ba2f9d"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e21",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "307fd9fb31ab8213"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e23",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "23e0f47d741e0a25"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e24",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "2fca7b621dbce2da"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e25",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "781ada5430c2b250"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e28",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "04e4ad4bae829631"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e29",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "c6ff4ba84d6a67e9"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e30",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "b46f95a5938407fe"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e31",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "393e94685459679d"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e32",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "cf0af111e45548e7"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e33",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "f9cf742414fa88eb"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e34",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "df861962e850026f"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1e35",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "d8fada2daab12327"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      }
+    ]
+  }
+]

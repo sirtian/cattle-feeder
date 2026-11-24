@@ -1,0 +1,354 @@
+[
+  {
+    "name": "Physical Error",
+    "violation_count": 81,
+    "truncated": true,
+    "list": [
+      {
+        "name": "Track",
+        "violation_count": 81,
+        "truncated": true,
+        "list": [
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "d4c48c33db23cd70"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "3ace00b82292b779"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "77ec7da466076d28"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "18888ed56ed36479"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "29dd07083bea6aad"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "79cb93e9e12dc03a"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "b74abd4946729fcf"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "fc64433cd49bb422"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "f1f9d1cb7d0b50b2"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(24V_P): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "d29f585544328800"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 47.8mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "5525c8cf09a7a6dc"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 47.8mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "6d847d9210171663"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "eaf07def18c526b4"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "9ffd94e80fac2b7b"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "18e86c7f18340342"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "70052e27863410e7"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "53c17f2dd4ed4f74"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "c4d8990bf0eef373"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 47.8mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "3fe52903455906c1"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 47.8mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "fbd3abfa73ea2b4d"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "2ed12b8e86326ab8"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 47.8mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "7ab91d74625208c7"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 47.8mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "dbbea677ce6613c4"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(5V): e-1",
+            "message": "Object 1 stroke width is 51.2mil, should be 5.9mil ~ 47.2mil",
+            "primitive_ids": [
+              "36ba12f9f024d3a8"
+            ],
+            "rule_name": "copilot_router_net_0_track",
+            "layer": "Top Layer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Connection Error",
+    "violation_count": 22,
+    "truncated": true,
+    "list": [
+      {
+        "name": "GND",
+        "violation_count": 18,
+        "truncated": true,
+        "list": [
+          {
+            "obj1": "(GND): e-1",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "84d0bf2cffb76fd4"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): C34_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "a9eb0807711592d2e17"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "f26bea72464fcf48"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): C46_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "964277343ed9ffaae15"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "98b0a979258f2335"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): R11_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "ad6355daccc42f8be12"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U4_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "7f189ad019b517a2e8"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): R10_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "f30b4e98f4321afee12"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      },
+      {
+        "name": "MCP_P12",
+        "violation_count": 2,
+        "list": [
+          {
+            "obj1": "(MCP_P12): U33_3",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "d222a9a4cb6284e3e62"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(MCP_P12): U34_3",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "85306e2d18dd8d67e42"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      },
+      {
+        "name": "MCP_P15",
+        "violation_count": 2,
+        "list": [
+          {
+            "obj1": "(MCP_P15): U33_6",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "d222a9a4cb6284e3e65"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(MCP_P15): U34_6",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "85306e2d18dd8d67e45"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      }
+    ]
+  }
+]

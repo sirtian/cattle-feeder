@@ -1,0 +1,45 @@
+{
+  "checkpoint": "5cd3ewfhs9lt7m6e",
+  "result": {
+    "byLcsc": [
+      {
+        "uuid": "2a16b44b218c4dfd96372a3decfe44ee",
+        "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+        "classification": {
+          "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+          "libraryType": "3"
+        },
+        "ordinal": 0,
+        "footprintName": "IND-SMD_L7.1-W6.6",
+        "footprintUuid": "0a956972613a413195dd8939923f26c4",
+        "model3DName": "IND-SMD_L6.6-W7.1-H3.0",
+        "model3DUuid": "f4ba7fb6b518404398a5bef98cb0da31",
+        "manufacturer": "PROD(谱罗德)",
+        "manufacturerId": "PSPMAA063T-100M-ANP",
+        "supplier": "LCSC",
+        "supplierId": "C436568",
+        "otherProperty": {
+          "LCSC Part Name": "10uH ±20% 5.5A",
+          "Supplier Part": "C436568",
+          "Manufacturer": "PROD(谱罗德)",
+          "Manufacturer Part": "PSPMAA063T-100M-ANP",
+          "Supplier Footprint": "SMD,7.1x6.6mm",
+          "JLCPCB Part Class": "Extended Part",
+          "Datasheet": "https://item.szlcsc.com/datasheet/PSPMAA063T-100M-ANP/434347.html",
+          "Supplier": "LCSC",
+          "Add into BOM": "yes",
+          "Convert to PCB": "yes",
+          "Symbol": "13bcbc7a80894b6e9858ab7bea5e7bc8",
+          "Designator": "L?",
+          "Footprint": "0a956972613a413195dd8939923f26c4",
+          "3D Model": "f4ba7fb6b518404398a5bef98cb0da31",
+          "3D Model Title": "IND-SMD_L6.6-W7.1-H3.0",
+          "3D Model Transform": "275.59,259.88137,0,0,0,0,0,0,0",
+          "Name": "={Manufacturer Part}"
+        }
+      }
+    ]
+  },
+  "artifacts": [],
+  "operation_id": "mutation:0d766920"
+}

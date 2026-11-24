@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>50头肉牛育肥 · 15天无人值守方案 · 3D布局示意</title>
+<style>
+  :root{
+    --ink:#eaf0f4;
+    --muted:#9fb0bd;
+    --accent:#e08a3c;
+    --panel:rgba(15,23,30,.78);
+    --line:rgba(255,255,255,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;overflow:hidden;background:#e6edf2;
+    font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+  canvas{display:block}
+  #hud{position:fixed;inset:0;pointer-events:none}
+  .panel{
+    position:absolute;background:var(--panel);color:var(--ink);
+    border:1px solid var(--line);border-radius:14px;padding:14px 16px;
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    pointer-events:auto;box-shadow:0 10px 30px rgba(10,20,30,.18);
+  }
+  #titlePanel{top:18px;left:18px;max-width:340px}
+  .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:20px;margin:6px 0 4px;font-weight:800;letter-spacing:.01em}
+  #titlePanel p{margin:0;font-size:12px;color:var(--muted);line-height:1.55}
+  #controls{top:18px;right:18px;display:flex;flex-wrap:wrap;gap:6px;max-width:340px}
+  button{
+    appearance:none;border:1px solid var(--line);background:rgba(255,255,255,.07);
+    color:var(--ink);padding:7px 11px;border-radius:9px;font-size:12px;
+    cursor:pointer;font-family:inherit;transition:all .15s ease;
+  }
+  button:hover{background:rgba(255,255,255,.14)}
+  button.active{background:var(--accent);border-color:var(--accent);color:#1b1206;font-weight:700}
+  #legend{bottom:18px;left:18px;max-width:330px}
+  .legend-title{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .legend-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:12px;color:#d7e1e8}
+  .legend-grid span{display:flex;align-items:center;gap:7px;white-space:nowrap}
+  .legend-grid i{width:10px;height:10px;border-radius:3px;display:inline-block;flex:none}
+  #titlePanel .sub{color:var(--muted);font-size:11px;line-height:1.55;margin-top:4px}
+  #topology{
+    bottom:18px;left:50%;transform:translateX(-50%);
+    width:calc(100% - 760px);max-width:780px;min-width:470px;
+  }
+  .topo-row{display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin-top:6px}
+  .topo-node{
+    display:inline-flex;align-items:center;gap:5px;
+    background:rgba(255,255,255,.07);border:1px solid var(--line);
+    border-radius:7px;padding:3px 7px;white-space:nowrap;
+    font-size:11px;line-height:1.3;
+  }
+  .topo-node::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--c,#9aa3a8);flex:none}
+  .topo-node small{color:var(--muted);font-size:10px}
+  .topo-arrow{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:-1px}
+  .topo-arrow.dash{color:#b5763f;font-size:11px;letter-spacing:0}
+  @media (max-width:1180px){ #topology,#btnTopo{display:none} }
+  #err{
+    display:none;position:fixed;inset:0;z-index:20;background:#0f171e;color:#eaf0f4;
+    padding:48px;font-size:15px;line-height:1.8;
+  }
+  #err code{color:var(--accent)}
+  #tags{position:fixed;inset:0;pointer-events:none;z-index:5}
+  #leaders{position:fixed;inset:0;pointer-events:none;z-index:4;overflow:visible}
+  #leaders line{stroke:rgba(15,23,30,.42);stroke-width:1}
+  #leaders circle{fill:rgba(15,23,30,.55)}
+  .tag{
+    position:absolute;transform:translate(-50%,-50%);
+    background:rgba(15,23,30,.86);color:#f2f6f9;
+    border:1px solid rgba(255,255,255,.22);border-radius:8px;
+    padding:4px 9px;font-size:12px;font-weight:650;line-height:1.2;
+    white-space:nowrap;letter-spacing:.01em;
+    box-shadow:0 4px 12px rgba(10,20,30,.22);
+    display:flex;align-items:center;gap:6px;
+  }
+  .tag i{width:7px;height:7px;border-radius:2px;flex:none}
+  @media (max-width:820px){ .tag{font-size:11px;padding:3px 7px} }
+  @media (max-width:820px){
+    #legend{display:none}
+    #titlePanel{max-width:230px;padding:10px 12px}
+    h1{font-size:16px}
+    #controls{max-width:230px}
+    button{padding:6px 9px;font-size:11px}
+  }
+</style>
+</head>
+<body>
+
+<div id="err">
+  <strong>Three.js 未加载成功。</strong><br>
+  请确认 <code>vendor/three.min.js</code> 与 <code>vendor/OrbitControls.js</code> 与本文件在同一项目目录下，
+  且本文件位于 <code>viz/</code> 子目录中。
+</div>
+
+<div id="hud">
+  <div class="panel" id="titlePanel">
+    <div class="kicker">50 头肉牛育肥 · 验证场</div>
+    <h1>15 天无人值守方案</h1>
+    <p>干料全自动线 + 自动饮水 · 3D 布局示意</p>
+    <p class="sub">220V · 同时运行 ≤5 kW · 32A 专线 · 15 天储料 9.75 t<br>示意布局，非施工图；牛只为示意，非实际数量</p>
+  </div>
+
+  <div class="panel" id="controls">
+    <button data-view="persp" class="active">透视</button>
+    <button data-view="top">俯视</button>
+    <button data-view="west">西侧</button>
+    <button data-view="east">东侧</button>
+    <button data-view="silo">料塔连接</button>
+    <button data-view="water">水箱连接</button>
+    <button id="btnLabels" class="active">标签</button>
+    <button id="btnRotate">旋转</button>
+    <button id="btnAnim" class="active">流动动画</button>
+    <button id="btnTopo" class="active">管线图</button>
+  </div>
+
+  <div class="panel" id="legend">
+    <div class="legend-title">图例 · 管线颜色 = 物料流向</div>
+    <div class="legend-grid">
+      <span><i style="background:#4f7192"></i>主料塔 10t</span>
+      <span><i style="background:#6b8a63"></i>草料塔 3t</span>
+      <span><i style="background:#b5763f"></i>兜底料仓</span>
+      <span><i style="background:#e08a3c"></i>链式输送线</span>
+      <span><i style="background:#3fa9d6"></i>饮水系统</span>
+      <span><i style="background:#8a6f4d"></i>牛舍围栏</span>
+    </div>
+  </div>
+
+  <div class="panel" id="topology">
+    <div class="legend-title">管线连接关系（自上而下逐级输送）</div>
+    <div class="topo-row">
+      <span class="topo-node" style="--c:#4f7192">主料塔 10t</span>
+      <span class="topo-node" style="--c:#6b8a63">草料塔 3t</span>
+      <span class="topo-arrow">→</span>
+      <span class="topo-node" style="--c:#d9a441">计量绞龙 ×2<small>PLC 分时</small></span>
+      <span class="topo-arrow">→</span>
+      <span class="topo-node" style="--c:#8f9aa0">转运箱<small>两路汇合</small></span>
+      <span class="topo-arrow">→</span>
+      <span class="topo-node" style="--c:#e08a3c">链式输送线 50m</span>
+      <span class="topo-arrow">→</span>
+      <span class="topo-node" style="--c:#b5763f">下料口 ×18 → 料槽</span>
+    </div>
+    <div class="topo-row">
+      <span class="topo-node" style="--c:#b5763f">兜底料仓 1.5t</span>
+      <span class="topo-arrow dash">独立放料线 ⟶</span>
+      <span class="topo-node" style="--c:#b5763f">输送线西端<small>绕开转运箱 · 独立驱动</small></span>
+    </div>
+    <div class="topo-row">
+      <span class="topo-node" style="--c:#3f9ec6">10t 水箱</span>
+      <span class="topo-arrow">→</span>
+      <span class="topo-node" style="--c:#3c7484">增压泵</span>
+      <span class="topo-arrow">→</span>
+      <span class="topo-node" style="--c:#3f9ec6">DN25 保温水管</span>
+      <span class="topo-arrow">→</span>
+      <span class="topo-node" style="--c:#c95850">阀门 ×2</span>
+      <span class="topo-arrow">→</span>
+      <span class="topo-node" style="--c:#3fa9d6">恒温饮水槽 ×2</span>
+    </div>
+  </div>
+
+  <svg id="leaders"></svg>
+  <div id="tags"></div>
+</div>
+
+<script src="../vendor/three.min.js"></script>
+<script src="../vendor/OrbitControls.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  if (!window.THREE || !THREE.OrbitControls) {
+    document.getElementById("err").style.display = "block";
+    return;
+  }
+
+  /* ---------- 基础场景 ---------- */
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xe6edf2);
+  scene.fog = new THREE.Fog(0xe6edf2, 150, 340);
+
+  const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.1, 600);
+  camera.position.set(36, 29, 46);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 0.92;
+  document.body.appendChild(renderer.domElement);
+
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.target.set(0, 2.4, 0);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.maxPolarAngle = Math.PI * 0.49;
+  controls.minDistance = 18;
+  controls.maxDistance = 170;
+  controls.autoRotateSpeed = 0.55;
+
+  /* ---------- 灯光 ---------- */
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x5a6b4a, 0.55));
+  scene.add(new THREE.AmbientLight(0xffffff, 0.12));
+
+  const sun = new THREE.DirectionalLight(0xffffff, 0.95);
+  sun.position.set(45, 65, 30);
+  sun.castShadow = true;
+  sun.shadow.mapSize.set(2048, 2048);
+  const sc = 62;
+  sun.shadow.camera.left = -sc;
+  sun.shadow.camera.right = sc;
+  sun.shadow.camera.top = sc;
+  sun.shadow.camera.bottom = -sc;
+  sun.shadow.camera.near = 1;
+  sun.shadow.camera.far = 220;
+  sun.shadow.bias = -0.0004;
+  sun.shadow.camera.updateProjectionMatrix();
+  scene.add(sun);
+
+  /* ---------- 材质工具 ---------- */
+  function mat(color, opts) {
+    return new THREE.MeshStandardMaterial(Object.assign({
+      color: color, roughness: 0.78, metalness: 0.08
+    }, opts || {}));
+  }
+  function box(w, h, d, color, opts) {
+    const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat(color, opts));
+    m.castShadow = true;
+    m.receiveShadow = true;
+    return m;
+  }
+  function cylBetween(a, b, r, color, opts) {
+    const p1 = new THREE.Vector3(a[0], a[1], a[2]);
+    const p2 = new THREE.Vector3(b[0], b[1], b[2]);
+    const dir = new THREE.Vector3().subVectors(p2, p1);
+    const len = dir.length();
+    const geo = new THREE.CylinderGeometry(r, r, len, 12);
+    const m = new THREE.Mesh(geo, mat(color, opts));
+    m.position.copy(p1).add(p2).multiplyScalar(0.5);
+    m.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir.clone().normalize());
+    m.castShadow = true;
+    m.receiveShadow = true;
+    return m;
+  }
+  function cyl(r, h, color, opts) {
+    const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, h, 28), mat(color, opts));
+    m.castShadow = true;
+    m.receiveShadow = true;
+    return m;
+  }
+
+  /* ---------- 地面 ---------- */
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(600, 600), mat(0x6b8054, { roughness: 1 }));
+  ground.rotation.x = -Math.PI / 2;
+  ground.receiveShadow = true;
+  scene.add(ground);
+
+  const grid = new THREE.GridHelper(300, 60, 0x55684d, 0x62775a);
+  grid.position.y = 0.02;
+  grid.material.transparent = true;
+  grid.material.opacity = 0.22;
+  scene.add(grid);
+
+  /* ---------- 牛舍地面 ---------- */
+  const BARN_L = 56, BARN_W = 18, ALLEY_W = 4.5;
+
+  const floor = box(BARN_L, 0.24, BARN_W, 0xc9d1d6, { roughness: 0.95 });
+  floor.position.y = 0.12;
+  scene.add(floor);
+
+  const alley = box(50, 0.08, ALLEY_W, 0xaeb9bf, { roughness: 0.95 });
+  alley.position.set(0, 0.26, 0);
+  scene.add(alley);
+
+  [-1, 1].forEach(function (s) {
+    const pen = box(50, 0.1, 6.6, 0xd8cbb8, { roughness: 1 });
+    pen.position.set(0, 0.26, s * 5.55);
+    scene.add(pen);
+  });
+
+  /* ---------- 料槽 ---------- */
+  [-1, 1].forEach(function (s) {
+    const t = box(50, 0.6, 0.75, 0x7d8f99);
+    t.position.set(0, 0.55, s * 2.65);
+    scene.add(t);
+    const feed = box(49.6, 0.08, 0.58, 0xc9a25e, { roughness: 1 });
+    feed.position.set(0, 0.87, s * 2.65);
+    scene.add(feed);
+  });
+
+  /* ---------- 围栏 ---------- */
+  const fenceMat = mat(0x8a6f4d);
+  const postGeo = new THREE.BoxGeometry(0.14, 3.2, 0.14);
+  function post(x, z) {
+    const m = new THREE.Mesh(postGeo, fenceMat);
+    m.position.set(x, 1.6, z);
+    m.castShadow = true;
+    scene.add(m);
+  }
+  function rail(x1, z1, x2, z2, y) {
+    const dx = x2 - x1, dz = z2 - z1;
+    const len = Math.hypot(dx, dz);
+    const m = new THREE.Mesh(new THREE.BoxGeometry(len, 0.08, 0.08), fenceMat);
+    m.position.set((x1 + x2) / 2, y, (z1 + z2) / 2);
+    m.rotation.y = -Math.atan2(dz, dx);
+    m.castShadow = true;
+    scene.add(m);
+  }
+  for (let x = -28; x <= 28; x += 4) { post(x, 9); post(x, -9); }
+  for (let z = -9; z <= 9; z += 4) { post(-28, z); post(28, z); }
+  [1.1, 2.2].forEach(function (y) {
+    rail(-28, 9, 28, 9, y);
+    rail(-28, -9, 28, -9, y);
+    rail(-28, -9, -28, 9, y);
+    rail(28, -9, 28, 9, y);
+  });
+  for (let x = -25; x <= 25; x += 5) { post(x, 3.35); post(x, -3.35); }
+
+  /* ---------- 牛舍立柱与屋面轮廓 ---------- */
+  function column(x, z, h) {
+    const c = box(0.24, h, 0.24, 0x7a6a55);
+    c.position.set(x, h / 2, z);
+    scene.add(c);
+  }
+  [-28, 0, 28].forEach(function (x) { column(x, 9, 5.4); column(x, -9, 5.4); });
+  [-9, 0, 9].forEach(function (z) { column(-28, z, 5.4); column(28, z, 5.4); });
+
+  [[-28, 9, 28, 9], [-28, -9, 28, -9]].forEach(function (r) {
+    const b = box(56, 0.18, 0.18, 0x7a6a55);
+    b.position.set(0, 5.4, r[1]);
+    scene.add(b);
+  });
+  [-28, 28].forEach(function (x) {
+    const b = box(0.18, 0.18, 18, 0x7a6a55);
+    b.position.set(x, 5.4, 0);
+    scene.add(b);
+  });
+  [-14, 0, 14].forEach(function (x) {
+    const b = box(0.18, 0.18, 18, 0x7a6a55);
+    b.position.set(x, 5.4, 0);
+    scene.add(b);
+  });
+  const ridge = box(56, 0.12, 0.12, 0x6b5b48);
+  ridge.position.set(0, 7.0, 0);
+  scene.add(ridge);
+  [-28, 0, 28].forEach(function (x) {
+    scene.add(cylBetween([x, 5.4, -9], [x, 7.0, 0], 0.07, 0x7a6a55));
+    scene.add(cylBetween([x, 5.4, 9], [x, 7.0, 0], 0.07, 0x7a6a55));
+  });
+
+  /* ---------- 料塔 ---------- */
+  function makeSilo(x, z, r, h, color) {
+    const g = new THREE.Group();
+    const body = cyl(r, h, color, { metalness: 0.28, roughness: 0.5 });
+    body.position.y = 1.1 + h / 2;
+    g.add(body);
+
+    const cone = new THREE.Mesh(
+      new THREE.CylinderGeometry(r, r * 0.14, 1.0, 28, 1, true),
+      mat(color, { metalness: 0.28, roughness: 0.5, side: THREE.DoubleSide })
+    );
+    cone.position.y = 0.6;
+    cone.castShadow = true;
+    g.add(cone);
+
+    const top = new THREE.Mesh(new THREE.ConeGeometry(r, 0.55, 28), mat(color, { metalness: 0.28, roughness: 0.5 }));
+    top.position.y = 1.1 + h + 0.27;
+    top.castShadow = true;
+    g.add(top);
+
+    const legMat = mat(0x5a5f63);
+    [[1, 1], [1, -1], [-1, 1], [-1, -1]].forEach(function (p) {
+      const leg = new THREE.Mesh(new THREE.BoxGeometry(0.12, 1.1, 0.12), legMat);
+      leg.position.set(p[0] * r * 0.66, 0.55, p[1] * r * 0.66);
+      leg.castShadow = true;
+      g.add(leg);
+    });
+
+    const ladder = new THREE.Mesh(new THREE.BoxGeometry(0.06, h * 0.82, 0.05), mat(0x9aa3a8));
+    ladder.position.set(r + 0.12, 1.1 + h * 0.45, 0);
+    g.add(ladder);
+
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(r + 0.03, 0.04, 8, 36), mat(0x9aa3a8));
+    ring.rotation.x = Math.PI / 2;
+    ring.position.y = 1.1 + h * 0.55;
+    g.add(ring);
+
+    g.position.set(x, 0, z);
+    scene.add(g);
+    return g;
+  }
+  makeSilo(-34, 7.0, 1.35, 4.0, 0x4f7192);   // 主料塔 10t
+  makeSilo(-34, 3.2, 0.90, 2.8, 0x6b8a63);   // 草料塔 3t
+  makeSilo(-34, -0.8, 0.70, 2.2, 0xb5763f);  // 兜底料仓 1.5t
+
+  /* ---------- 计量绞龙 + 转运 + 主输送线 ---------- */
+  const augerMat = { metalness: 0.35, roughness: 0.45 };
+
+  // 主料 / 草料 计量绞龙（橙色 = 饲料流）
+  scene.add(cylBetween([-34, 0.7, 7.0], [-28.6, 3.05, 0], 0.22, 0xd9a441, augerMat));
+  scene.add(cylBetween([-34, 0.7, 3.2], [-28.6, 3.05, 0], 0.22, 0xd9a441, augerMat));
+
+  // 料塔出料口法兰（强调“从这里接出”）
+  [[-34, 0.72, 7.0, 0.3, 0xd9a441], [-34, 0.72, 3.2, 0.26, 0xd9a441],
+   [-34, 0.62, -0.8, 0.22, 0x8f5a2a]].forEach(function (p) {
+    const flange = new THREE.Mesh(new THREE.SphereGeometry(p[3], 12, 10), mat(p[4], augerMat));
+    flange.position.set(p[0], p[1], p[2]);
+    scene.add(flange);
+  });
+
+  // 转运箱（两路汇合）
+  const transfer = box(1.3, 1.2, 1.3, 0x8f9aa0, { metalness: 0.25 });
+  transfer.position.set(-28.6, 3.2, 0);
+  scene.add(transfer);
+
+  // 转运箱 → 输送线（短溜管）
+  scene.add(cylBetween([-28.1, 3.35, 0], [-26.85, 3.85, 0], 0.26, 0xe08a3c, augerMat));
+
+  // 兜底料仓独立放料线（棕色，绕开转运箱，独立驱动）
+  scene.add(cylBetween([-34, 0.6, -0.8], [-33.4, 0.9, -1.8], 0.19, 0x8f5a2a, augerMat));
+  scene.add(cylBetween([-33.4, 0.9, -1.8], [-26.9, 3.35, -1.8], 0.19, 0x8f5a2a, augerMat));
+  scene.add(cylBetween([-26.9, 3.35, -1.8], [-26.55, 3.95, -0.1], 0.17, 0x8f5a2a, augerMat));
+
+  const conveyor = box(54, 0.45, 0.52, 0xe08a3c, { roughness: 0.55, metalness: 0.15 });
+  conveyor.position.set(0, 3.7, 0);
+  scene.add(conveyor);
+
+  const conveyorTop = box(54, 0.06, 0.30, 0xf2a94f, { roughness: 0.5 });
+  conveyorTop.position.set(0, 3.95, 0);
+  scene.add(conveyorTop);
+
+  for (let x = -26; x <= 26; x += 6) {
+    const leg = box(0.12, 3.7, 0.12, 0x8f9aa0);
+    leg.position.set(x, 1.85, 0);
+    scene.add(leg);
+  }
+
+  /* ---------- 下料口 ×18 ---------- */
+  const CHUTES = [-24, -18, -12, -6, 0, 6, 12, 18, 24];
+  CHUTES.forEach(function (x) {
+    const collar = box(0.34, 0.55, 0.34, 0xd9a441);
+    collar.position.set(x, 3.35, 0);
+    scene.add(collar);
+
+    const cross = box(0.20, 0.20, 5.1, 0xd9a441);
+    cross.position.set(x, 3.05, 0);
+    scene.add(cross);
+
+    [-2.65, 2.65].forEach(function (z) {
+      const down = box(0.18, 2.3, 0.18, 0xd9a441);
+      down.position.set(x, 1.85, z);
+      scene.add(down);
+      const outlet = box(0.30, 0.12, 0.34, 0xb5763f);
+      outlet.position.set(x, 0.74, z);
+      scene.add(outlet);
+    });
+  });
+
+  /* ---------- 饮水系统 ---------- */
+  function makeTank(x, z, r, h) {
+    const g = new THREE.Group();
+    const base = cyl(r * 1.06, 0.2, 0x9aa3a8);
+    base.position.y = 0.1;
+    g.add(base);
+    const body = cyl(r, h, 0x4a90a4, { metalness: 0.22, roughness: 0.42 });
+    body.position.y = 0.2 + h / 2;
+    g.add(body);
+    const lid = cyl(r * 1.03, 0.12, 0x3c7484);
+    lid.position.y = 0.26 + h;
+    g.add(lid);
+    const band = new THREE.Mesh(new THREE.TorusGeometry(r + 0.03, 0.045, 8, 36), mat(0x9aa3a8));
+    band.rotation.x = Math.PI / 2;
+    band.position.y = 0.2 + h * 0.55;
+    g.add(band);
+    g.position.set(x, 0, z);
+    scene.add(g);
+  }
+  makeTank(31, 7, 1.3, 2.2);
+
+  const waterMats = [];
+  [-1, 1].forEach(function (s) {
+    const t = box(3.2, 0.55, 0.9, 0x7f8c8d);
+    t.position.set(8, 0.45, s * 7.6);
+    scene.add(t);
+    const wm = new THREE.MeshStandardMaterial({
+      color: 0x3fa9d6, transparent: true, opacity: 0.82,
+      roughness: 0.15, metalness: 0.1
+    });
+    const w = new THREE.Mesh(new THREE.BoxGeometry(2.9, 0.06, 0.7), wm);
+    w.position.set(8, 0.76, s * 7.6);
+    scene.add(w);
+    waterMats.push(wm);
+  });
+
+  // 供水管路（蓝色 = 水管流）：水箱 → 泵 → 主管 → 两侧恒温槽
+  const wpipe = { metalness: 0.28, roughness: 0.4 };
+  const WC = 0x3f9ec6;
+
+  // 泵站位于水箱南侧：水箱出水 → 泵 → 立管 → 主管 → 两侧槽
+  const pump = box(0.62, 0.5, 0.62, 0xc3ccd1, { metalness: 0.25, roughness: 0.5 });
+  pump.position.set(31, 0.45, 5.15);
+  scene.add(pump);
+
+  scene.add(cylBetween([31, 0.5, 5.7], [31, 0.5, 5.46], 0.15, WC, wpipe));    // 吸入管
+  scene.add(cylBetween([31, 0.7, 5.15], [31, 2.7, 5.15], 0.15, WC, wpipe));   // 立管
+  scene.add(cylBetween([31, 2.7, 5.15], [8, 2.7, 5.15], 0.15, WC, wpipe));    // 主管
+  scene.add(cylBetween([8, 2.7, 7.6], [8, 2.7, -7.6], 0.15, WC, wpipe));      // 横向支管
+  scene.add(cylBetween([8, 2.7, 7.6], [8, 0.98, 7.6], 0.13, WC, wpipe));      // 下至北槽
+  scene.add(cylBetween([8, 2.7, -7.6], [8, 0.98, -7.6], 0.13, WC, wpipe));    // 下至南槽
+
+  // 弯头接头
+  [[31, 2.7, 5.15], [8, 2.7, 5.15], [8, 2.7, 7.6], [8, 2.7, -7.6]].forEach(function (p) {
+    const joint = new THREE.Mesh(new THREE.SphereGeometry(0.17, 12, 10), mat(WC, wpipe));
+    joint.position.set(p[0], p[1], p[2]);
+    scene.add(joint);
+  });
+
+  // 槽前阀门
+  [[8, 0.95, 7.6], [8, 0.95, -7.6]].forEach(function (p) {
+    const valve = new THREE.Mesh(new THREE.SphereGeometry(0.16, 10, 8), mat(0xc95850, { metalness: 0.3, roughness: 0.4 }));
+    valve.position.set(p[0], p[1] + 0.1, p[2]);
+    scene.add(valve);
+  });
+
+  /* ---------- 控制柜 ---------- */
+  const cab = box(1.25, 1.9, 0.7, 0xe8ecef, { metalness: 0.2, roughness: 0.5 });
+  cab.position.set(-30.5, 0.95, -4.6);
+  scene.add(cab);
+  const cabDoor = box(0.98, 1.6, 0.04, 0x3b4a55);
+  cabDoor.position.set(-30.5, 0.95, -4.24);
+  scene.add(cabDoor);
+  const cabScreen = box(0.34, 0.24, 0.03, 0x7fd3f0);
+  cabScreen.position.set(-30.5, 1.35, -4.21);
+  scene.add(cabScreen);
+
+  /* ---------- 摄像头 ---------- */
+  function cameraPost(x, z) {
+    const pole = box(0.1, 3.4, 0.1, 0x6b7378);
+    pole.position.set(x, 1.7, z);
+    scene.add(pole);
+    const head = box(0.38, 0.26, 0.26, 0xe8ecef);
+    head.position.set(x, 3.35, z);
+    scene.add(head);
+    const lens = cyl(0.06, 0.1, 0x1c252b);
+    lens.rotation.x = Math.PI / 2;
+    lens.position.set(x, 3.35, z + 0.16);
+    scene.add(lens);
+  }
+  cameraPost(-27, 8.5);
+  cameraPost(27, 8.5);
+  cameraPost(-27, -8.5);
+  cameraPost(27, -8.5);
+
+  /* ---------- 牛只（示意） ---------- */
+  const cowColors = [0x8d5a3b, 0xb08968, 0x6b4a35, 0xd9d2c5, 0x7a5a44];
+  function makeCow(x, z, rot, color) {
+    const g = new THREE.Group();
+    const bodyMat = mat(color, { roughness: 0.95 });
+
+    const body = box(1.5, 0.8, 0.65, color, { roughness: 0.95 });
+    body.position.y = 1.0;
+    g.add(body);
+
+    const patch = box(0.68, 0.82, 0.67, 0xf2efe6, { roughness: 0.95 });
+    patch.position.set(-0.22, 1.0, 0);
+    g.add(patch);
+
+    const head = box(0.55, 0.5, 0.5, color, { roughness: 0.95 });
+    head.position.set(0.95, 1.18, 0);
+    g.add(head);
+
+    const snout = box(0.22, 0.22, 0.34, 0xe8c9a8, { roughness: 0.95 });
+    snout.position.set(1.22, 1.08, 0);
+    g.add(snout);
+
+    [-1, 1].forEach(function (s) {
+      const ear = box(0.18, 0.08, 0.12, color);
+      ear.position.set(0.85, 1.4, s * 0.3);
+      g.add(ear);
+    });
+
+    const legGeo = new THREE.CylinderGeometry(0.075, 0.065, 0.75, 8);
+    [[0.5, 0.22], [0.5, -0.22], [-0.5, 0.22], [-0.5, -0.22]].forEach(function (p) {
+      const leg = new THREE.Mesh(legGeo, mat(0x6b5545, { roughness: 0.95 }));
+      leg.position.set(p[0], 0.38, p[1]);
+      leg.castShadow = true;
+      g.add(leg);
+    });
+
+    const tail = box(0.06, 0.6, 0.06, 0x6b5545);
+    tail.position.set(-0.78, 1.0, 0);
+    tail.rotation.z = 0.2;
+    g.add(tail);
+
+    g.position.set(x, 0, z);
+    g.rotation.y = rot;
+    g.scale.setScalar(0.95);
+    scene.add(g);
+  }
+  function scatterCows(n, zMin, zMax) {
+    for (let i = 0; i < n; i++) {
+      const x = -22 + Math.random() * 44;
+      const z = zMin + Math.random() * (zMax - zMin);
+      makeCow(x, z, Math.random() * Math.PI * 2, cowColors[i % cowColors.length]);
+    }
+  }
+  scatterCows(9, 4.1, 8.2);
+  scatterCows(9, -8.2, -4.1);
+
+  /* ---------- 标签（屏幕空间 HTML，随视角投影） ---------- */
+  const tagLayer = document.getElementById("tags");
+  const tags = [];
+
+  function makeLabel(text, x, y, z, color) {
+    const el = document.createElement("div");
+    el.className = "tag";
+    (Array.isArray(color) ? color : color ? [color] : []).forEach(function (c) {
+      const dot = document.createElement("i");
+      dot.style.background = c;
+      el.appendChild(dot);
+    });
+    el.appendChild(document.createTextNode(text));
+    tagLayer.appendChild(el);
+    tags.push({ el: el, pos: new THREE.Vector3(x, y, z) });
+  }
+
+  makeLabel("料塔组：主料 10t · 草料 3t · 兜底 1.5t", -34, 8.0, 2.6,
+            ["#4f7192", "#6b8a63", "#b5763f"]);
+  makeLabel("控制柜", -30.5, 4.2, -4.6, "#8f9aa0");
+  makeLabel("链式输送线 50m", 0, 6.0, 0, "#e08a3c");
+  makeLabel("A 组 25 头", -9, 4.8, 7.4);
+  makeLabel("B 组 25 头", 9, 4.8, -7.4);
+  makeLabel("恒温饮水槽 ×2", 8, 1.6, 8.3, "#3fa9d6");
+  makeLabel("10t 水箱", 31, 5.2, 7.0, "#3fa9d6");
+  makeLabel("下料口 ×18", 19, 5.6, 3.2, "#e08a3c");
+  makeLabel("计量绞龙 ×2（分时运行）", -31.3, 2.2, 3.6, "#d9a441");
+  makeLabel("转运箱 · 两路汇合", -28.6, 4.45, 0.5, "#8f9aa0");
+  makeLabel("兜底独立放料线", -30.2, 2.3, -1.8, "#b5763f");
+  makeLabel("DN25 保温水管", 20, 3.2, 5.15, "#3f9ec6");
+  makeLabel("增压泵", 31, 0.8, 5.15, "#3c7484");
+
+  const SVGNS = "http://www.w3.org/2000/svg";
+  const leaderLayer = document.getElementById("leaders");
+  tags.forEach(function (t) {
+    t.line = document.createElementNS(SVGNS, "line");
+    t.dot = document.createElementNS(SVGNS, "circle");
+    t.dot.setAttribute("r", "2.4");
+    leaderLayer.appendChild(t.line);
+    leaderLayer.appendChild(t.dot);
+  });
+
+  const tagV = new THREE.Vector3();
+  function updateTags() {
+    const W = window.innerWidth, H = window.innerHeight;
+    const pad = 10, gap = 4;
+    const list = [];
+
+    tags.forEach(function (t) {
+      tagV.copy(t.pos).project(camera);
+      const visible = tagV.z < 1 && tagV.z > -1;
+      t.el.style.display = visible ? "flex" : "none";
+      t.line.style.display = visible ? "" : "none";
+      t.dot.style.display = visible ? "" : "none";
+      if (!visible) return;
+      t.ax = (tagV.x + 1) / 2 * W;
+      t.ay = (1 - tagV.y) / 2 * H;
+      t.w = t.el.offsetWidth;
+      t.h = t.el.offsetHeight;
+      t.cx = t.ax;
+      t.cy = t.ay;
+      list.push(t);
+    });
+
+    // 屏幕空间避让：按锚点高度排序后向下推开重叠标签
+    list.sort(function (a, b) { return a.ay - b.ay; });
+    for (let pass = 0; pass < 6; pass++) {
+      let moved = false;
+      for (let i = 0; i < list.length; i++) {
+        for (let j = i + 1; j < list.length; j++) {
+          const a = list[i], b = list[j];
+          if (Math.abs(a.cx - b.cx) >= (a.w + b.w) / 2 + gap) continue;
+          if (Math.abs(a.cy - b.cy) >= (a.h + b.h) / 2 + gap) continue;
+          const need = (a.h + b.h) / 2 + gap - Math.abs(a.cy - b.cy);
+          const dir = b.cy >= a.cy ? 1 : -1;
+          b.cy += dir * (need / 2 + 0.5);
+          a.cy -= dir * (need / 2 + 0.5);
+          moved = true;
+        }
+      }
+      if (!moved) break;
+    }
+
+    list.forEach(function (t) {
+      t.cx = Math.min(W - pad - t.w / 2, Math.max(pad + t.w / 2, t.cx));
+      t.cy = Math.min(H - pad - t.h / 2, Math.max(pad + t.h / 2, t.cy));
+      t.el.style.left = Math.round(t.cx) + "px";
+      t.el.style.top = Math.round(t.cy) + "px";
+
+      const x1 = t.cx - t.w / 2, x2 = t.cx + t.w / 2;
+      const y1 = t.cy - t.h / 2, y2 = t.cy + t.h / 2;
+      const nx = Math.max(x1, Math.min(t.ax, x2));
+      const ny = Math.max(y1, Math.min(t.ay, y2));
+      const showLine = Math.hypot(t.ax - nx, t.ay - ny) > 10;
+      t.line.style.display = showLine ? "" : "none";
+      if (showLine) {
+        t.line.setAttribute("x1", t.ax.toFixed(1));
+        t.line.setAttribute("y1", t.ay.toFixed(1));
+        t.line.setAttribute("x2", nx.toFixed(1));
+        t.line.setAttribute("y2", ny.toFixed(1));
+      }
+      t.dot.setAttribute("cx", t.ax.toFixed(1));
+      t.dot.setAttribute("cy", t.ay.toFixed(1));
+    });
+  }
+
+  /* ---------- 饲喂动画粒子 ---------- */
+  const particles = [];
+  const pGeo = new THREE.SphereGeometry(0.10, 8, 8);
+  const pMat = new THREE.MeshBasicMaterial({ color: 0xffd166 });
+  for (let i = 0; i < 46; i++) {
+    const p = new THREE.Mesh(pGeo, pMat);
+    p.position.set(-27 + Math.random() * 52, 3.98, (Math.random() - 0.5) * 0.22);
+    scene.add(p);
+    particles.push(p);
+  }
+
+  const dropParticles = [];
+  const dropGeo = new THREE.SphereGeometry(0.085, 8, 8);
+  const dropMat = new THREE.MeshBasicMaterial({ color: 0xffd166 });
+  CHUTES.forEach(function (x) {
+    [-2.65, 2.65].forEach(function (z) {
+      const p = new THREE.Mesh(dropGeo, dropMat);
+      p.userData = { t: Math.random() * 1.3 };
+      p.position.set(x, 2.9, z);
+      scene.add(p);
+      dropParticles.push(p);
+    });
+  });
+
+  /* ---------- 管线流动粒子（沿折线运动，显示物料走向） ---------- */
+  const flowGroups = [];
+
+  function flowPath(points, count, color, speed, radius) {
+    const pts = points.map(function (p) { return new THREE.Vector3(p[0], p[1], p[2]); });
+    const segs = [];
+    let total = 0;
+    for (let i = 0; i < pts.length - 1; i++) {
+      const len = pts[i].distanceTo(pts[i + 1]);
+      segs.push({ a: pts[i], b: pts[i + 1], len: len, start: total });
+      total += len;
+    }
+    const geo = new THREE.SphereGeometry(radius, 8, 8);
+    const m = new THREE.MeshBasicMaterial({ color: color });
+    const group = { segs: segs, total: total, speed: speed, dots: [] };
+    for (let i = 0; i < count; i++) {
+      const dot = new THREE.Mesh(geo, m);
+      dot.userData.d = (i / count) * total;
+      scene.add(dot);
+      group.dots.push(dot);
+      setFlowAt(group, dot, dot.userData.d);
+    }
+    flowGroups.push(group);
+  }
+
+  function setFlowAt(group, dot, d) {
+    let seg = group.segs[group.segs.length - 1];
+    for (let i = 0; i < group.segs.length; i++) {
+      if (d <= group.segs[i].start + group.segs[i].len) { seg = group.segs[i]; break; }
+    }
+    const k = seg.len > 0 ? Math.min(1, Math.max(0, (d - seg.start) / seg.len)) : 0;
+    dot.position.lerpVectors(seg.a, seg.b, k);
+  }
+
+  // 主料 / 草料 → 转运箱 → 输送线（橙色）
+  flowPath([[-34, 0.74, 7.0], [-28.6, 3.16, 0], [-28.1, 3.36, 0], [-26.85, 3.9, 0]], 6, 0xffc15c, 3.2, 0.26);
+  flowPath([[-34, 0.74, 3.2], [-28.6, 3.16, 0], [-28.1, 3.36, 0], [-26.85, 3.9, 0]], 5, 0xffc15c, 3.2, 0.26);
+  // 兜底独立线（深棕）
+  flowPath([[-34, 0.64, -0.8], [-33.4, 0.94, -1.8], [-26.9, 3.4, -1.8], [-26.55, 4.0, -0.1]], 6, 0xc08454, 2.7, 0.24);
+  // 水箱 → 泵 → 立管 → 主管 → 北槽；主管 → 南槽（浅蓝）
+  flowPath([[31, 0.5, 5.7], [31, 0.5, 5.15], [31, 2.7, 5.15], [8, 2.7, 5.15], [8, 2.7, 7.6], [8, 0.98, 7.6]], 9, 0xbfeaf7, 2.5, 0.18);
+  flowPath([[8, 2.7, 5.15], [8, 2.7, -7.6], [8, 0.98, -7.6]], 8, 0xbfeaf7, 2.5, 0.18);
+
+  /* ---------- 视角与交互 ---------- */
+  const views = {
+    persp: { pos: [34, 27, 44], target: [2, 1.4, 1.5] },
+    top:   { pos: [0, 72, 0.8], target: [0, 0, 0] },
+    west:  { pos: [-62, 26, 2], target: [-10, -1, 0] },
+    east:  { pos: [62, 26, 2], target: [10, -1, 0] },
+    silo:  { pos: [-17, 10, 20], target: [-30, 3.0, 1.6] },
+    water: { pos: [19, 14, 30], target: [18, 1.8, 3.2] }
+  };
+  function setView(name) {
+    const v = views[name];
+    camera.position.set(v.pos[0], v.pos[1], v.pos[2]);
+    controls.target.set(v.target[0], v.target[1], v.target[2]);
+    controls.update();
+    document.querySelectorAll("[data-view]").forEach(function (b) {
+      b.classList.toggle("active", b.getAttribute("data-view") === name);
+    });
+  }
+  document.querySelectorAll("[data-view]").forEach(function (b) {
+    b.addEventListener("click", function () { setView(b.getAttribute("data-view")); });
+  });
+
+  let labelsOn = true;
+  const btnLabels = document.getElementById("btnLabels");
+  btnLabels.addEventListener("click", function () {
+    labelsOn = !labelsOn;
+    tagLayer.style.display = labelsOn ? "block" : "none";
+    leaderLayer.style.display = labelsOn ? "block" : "none";
+    btnLabels.classList.toggle("active", labelsOn);
+  });
+
+  let autoRotate = false;
+  const btnRotate = document.getElementById("btnRotate");
+  btnRotate.addEventListener("click", function () {
+    autoRotate = !autoRotate;
+    controls.autoRotate = autoRotate;
+    btnRotate.classList.toggle("active", autoRotate);
+  });
+
+  let feedAnim = true;
+  const btnAnim = document.getElementById("btnAnim");
+  btnAnim.addEventListener("click", function () {
+    feedAnim = !feedAnim;
+    btnAnim.classList.toggle("active", feedAnim);
+    particles.forEach(function (p) { p.visible = feedAnim; });
+    dropParticles.forEach(function (p) { p.visible = feedAnim; });
+    flowGroups.forEach(function (g) {
+      g.dots.forEach(function (dot) { dot.visible = feedAnim; });
+    });
+  });
+
+  let topoOn = true;
+  const btnTopo = document.getElementById("btnTopo");
+  const topoPanel = document.getElementById("topology");
+  btnTopo.addEventListener("click", function () {
+    topoOn = !topoOn;
+    topoPanel.style.display = topoOn ? "" : "none";
+    btnTopo.classList.toggle("active", topoOn);
+  });
+
+  /* ---------- 渲染循环 ---------- */
+  const clock = new THREE.Clock();
+
+  function animate() {
+    requestAnimationFrame(animate);
+    const dt = Math.min(clock.getDelta(), 0.05);
+    const t = clock.elapsedTime;
+
+    if (feedAnim) {
+      particles.forEach(function (p) {
+        p.position.x += 7.2 * dt;
+        if (p.position.x > 27) p.position.x = -27;
+      });
+
+      dropParticles.forEach(function (p) {
+        p.userData.t += dt;
+        const cycle = 1.35;
+        const local = p.userData.t % cycle;
+        p.position.y = 2.92 - (local / cycle) * 2.07;
+      });
+
+      flowGroups.forEach(function (g) {
+        g.dots.forEach(function (dot) {
+          dot.userData.d += g.speed * dt;
+          if (dot.userData.d > g.total) dot.userData.d -= g.total;
+          setFlowAt(g, dot, dot.userData.d);
+        });
+      });
+    }
+
+    waterMats.forEach(function (m, i) {
+      m.opacity = 0.74 + Math.sin(t * 1.6 + i * 1.3) * 0.10;
+    });
+
+    controls.update();
+    renderer.render(scene, camera);
+    if (labelsOn) updateTags();
+  }
+  animate();
+
+  /* ---------- 自适应 ---------- */
+  window.addEventListener("resize", function () {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+
+  const hashView = (location.hash || "").replace("#", "");
+  setView(views[hashView] ? hashView : "persp");
+})();
+</script>
+</body>
+</html>

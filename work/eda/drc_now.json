@@ -1,0 +1,124 @@
+[
+  {
+    "name": "Connection Error",
+    "violation_count": 195,
+    "truncated": true,
+    "list": [
+      {
+        "name": "GND",
+        "violation_count": 191,
+        "truncated": true,
+        "list": [
+          {
+            "obj1": "(GND): e8e8",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "cc80b931be89edac"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e8e8",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "4760742d2625e721"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e8e8",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "e33d7473ef410914"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e8e8",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "3f2f23dd7b7f8516"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e8e8",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "4a2a230cbe3f4c42"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e8e8",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "e33316b5b6faf9a8"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e8e8",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "d9f6377138ede8c6"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e8e8",
+            "message": "Object 1 is a free copper region",
+            "primitive_ids": [
+              "cc59e401afa89466"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      },
+      {
+        "name": "MCP_P12",
+        "violation_count": 2,
+        "list": [
+          {
+            "obj1": "(MCP_P12): U33_3",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "d222a9a4cb6284e3e62"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(MCP_P12): U34_3",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "85306e2d18dd8d67e42"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      },
+      {
+        "name": "MCP_P15",
+        "violation_count": 2,
+        "list": [
+          {
+            "obj1": "(MCP_P15): U33_6",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "d222a9a4cb6284e3e65"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(MCP_P15): U34_6",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "85306e2d18dd8d67e45"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,71 @@
+{
+ "add_components": [
+  {
+   "designator": "J50",
+   "value": "KF301-2P",
+   "block_name": "Charge",
+   "search_query": "KF301-2P",
+   "part_uuid": "41ddecaaf01b4c1aa92ec4bfe22149b7",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "CHARGE_INT"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J51",
+   "value": "KF301-2P",
+   "block_name": "Aux 24V",
+   "search_query": "KF301-2P",
+   "part_uuid": "41ddecaaf01b4c1aa92ec4bfe22149b7",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J52",
+   "value": "KF128-4P",
+   "block_name": "Debug",
+   "search_query": "KF128-4P",
+   "part_uuid": "e2b52e96898243feb9ae815fb2df58b4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "UART0_TX"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "UART0_RX"
+    }
+   ]
+  }
+ ]
+}

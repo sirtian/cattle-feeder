@@ -1,0 +1,11 @@
+{
+  "checkpoint": "d2srijohnu6ffjio",
+  "result": {
+    "error": {
+      "phase": "execute",
+      "message": "TypeError: Cannot read properties of undefined (reading 'property')"
+    }
+  },
+  "artifacts": [],
+  "operation_id": "mutation:dbb951da"
+}

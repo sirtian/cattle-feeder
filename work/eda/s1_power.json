@@ -1,0 +1,509 @@
+{
+ "add_components": [
+  {
+   "designator": "J1",
+   "value": "KF301-2P",
+   "block_name": "Input",
+   "search_query": "KF301-2P",
+   "part_uuid": "41ddecaaf01b4c1aa92ec4bfe22149b7",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_IN"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "F1",
+   "value": "5A",
+   "block_name": "Input",
+   "search_query": "5A",
+   "part_uuid": "a306e89c5184419fa40510f6e4c41ef3",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_IN"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "24V_F"
+    }
+   ]
+  },
+  {
+   "designator": "D1",
+   "value": "SMBJ33A",
+   "block_name": "Input",
+   "search_query": "SMBJ33A",
+   "part_uuid": "590adfde073642e28b76da2960491d44",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "C",
+     "signal_name": "24V_F"
+    },
+    {
+     "pin_number": "2",
+     "name": "A",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "D2",
+   "value": "SS54",
+   "block_name": "Input",
+   "search_query": "SS54",
+   "part_uuid": "9c61e9fbc213412a99eb76700a553e19",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "A",
+     "signal_name": "24V_F"
+    },
+    {
+     "pin_number": "2",
+     "name": "K",
+     "signal_name": "24V_P"
+    }
+   ]
+  },
+  {
+   "designator": "C1",
+   "value": "100uF/50V",
+   "block_name": "Input",
+   "search_query": "100uF/50V",
+   "part_uuid": "395bf3c262db4d0680bb53c7c056e5d4",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C2",
+   "value": "10uF/50V",
+   "block_name": "Input",
+   "search_query": "10uF/50V",
+   "part_uuid": "8975ca809f0a4ae28e823144c6e9c898",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U1",
+   "value": "XL4015E1",
+   "block_name": "Buck5V",
+   "search_query": "XL4015E1",
+   "part_uuid": "7ce14dedaccf48c8820433edea896976",
+   "pins": [
+    {
+     "pin_number": "5",
+     "name": "VIN",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "1",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "SW",
+     "signal_name": "SW"
+    },
+    {
+     "pin_number": "6",
+     "name": "SW",
+     "signal_name": "SW"
+    },
+    {
+     "pin_number": "2",
+     "name": "FB",
+     "signal_name": "FB"
+    },
+    {
+     "pin_number": "4",
+     "name": "VC",
+     "signal_name": ""
+    }
+   ]
+  },
+  {
+   "designator": "L1",
+   "value": "10uH",
+   "block_name": "Buck5V",
+   "search_query": "10uH",
+   "part_uuid": "2a16b44b218c4dfd96372a3decfe44ee",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "SW"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "5V"
+    }
+   ]
+  },
+  {
+   "designator": "D3",
+   "value": "SS54",
+   "block_name": "Buck5V",
+   "search_query": "SS54",
+   "part_uuid": "9c61e9fbc213412a99eb76700a553e19",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "A",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "2",
+     "name": "K",
+     "signal_name": "SW"
+    }
+   ]
+  },
+  {
+   "designator": "C3",
+   "value": "47uF/10V",
+   "block_name": "Buck5V",
+   "search_query": "47uF/10V",
+   "part_uuid": "d223f2ac21d6493984e07f58fab8b979",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C4",
+   "value": "10uF",
+   "block_name": "Buck5V",
+   "search_query": "10uF",
+   "part_uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "R1",
+   "value": "30k",
+   "block_name": "Buck5V",
+   "search_query": "30k",
+   "part_uuid": "9a675f8bd80247aa9efb64e703d61a4b",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "FB"
+    }
+   ]
+  },
+  {
+   "designator": "R2",
+   "value": "10k",
+   "block_name": "Buck5V",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "FB"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U2",
+   "value": "AMS1117-3.3",
+   "block_name": "3V3",
+   "search_query": "AMS1117-3.3",
+   "part_uuid": "9f9c6cb41c7449fd8acf96aceed2661a",
+   "pins": [
+    {
+     "pin_number": "3",
+     "name": "VIN",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "1",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "2",
+     "name": "VOUT",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "4",
+     "name": "VOUT",
+     "signal_name": "3V3"
+    }
+   ]
+  },
+  {
+   "designator": "C5",
+   "value": "10uF",
+   "block_name": "3V3",
+   "search_query": "10uF",
+   "part_uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "5V"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C6",
+   "value": "10uF",
+   "block_name": "3V3",
+   "search_query": "10uF",
+   "part_uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "D4",
+   "value": "RED",
+   "block_name": "LED",
+   "search_query": "RED",
+   "part_uuid": "631ea49b49b24e0990e2be4d7ce9bccb",
+   "pins": [
+    {
+     "pin_number": "2",
+     "name": "A",
+     "signal_name": "LED_A"
+    },
+    {
+     "pin_number": "1",
+     "name": "K",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "R3",
+   "value": "1k",
+   "block_name": "LED",
+   "search_query": "1k",
+   "part_uuid": "65abbad5fa864933b552e0f016ece0db",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "LED_A"
+    }
+   ]
+  },
+  {
+   "designator": "R4",
+   "value": "100k",
+   "block_name": "Sense",
+   "search_query": "100k",
+   "part_uuid": "acc294b6661948399f609b41c77ed19f",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "24V_SENSE"
+    }
+   ]
+  },
+  {
+   "designator": "R5",
+   "value": "15k",
+   "block_name": "Sense",
+   "search_query": "15k",
+   "part_uuid": "6d104587f1cd4b509c6a5fb272570507",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_SENSE"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C7",
+   "value": "100nF",
+   "block_name": "Sense",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_SENSE"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J2",
+   "value": "KF301-2P",
+   "block_name": "Sense",
+   "search_query": "KF301-2P",
+   "part_uuid": "41ddecaaf01b4c1aa92ec4bfe22149b7",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "48V_IN"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "R6",
+   "value": "100k",
+   "block_name": "Sense",
+   "search_query": "100k",
+   "part_uuid": "acc294b6661948399f609b41c77ed19f",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "48V_IN"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "48V_SENSE"
+    }
+   ]
+  },
+  {
+   "designator": "R7",
+   "value": "6.8k",
+   "block_name": "Sense",
+   "search_query": "6.8k",
+   "part_uuid": "0a2f9f81f7e94abc88226c54e4d771cd",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "48V_SENSE"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C8",
+   "value": "100nF",
+   "block_name": "Sense",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "48V_SENSE"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  }
+ ]
+}

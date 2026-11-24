@@ -1,0 +1,575 @@
+{
+ "add_components": [
+  {
+   "designator": "U1",
+   "value": "ESP32-S3-WROOM-1-N16R8",
+   "block_name": "MCU",
+   "search_query": "ESP32-S3-WROOM-1-N16R8",
+   "part_uuid": "701a1177d7184d1bbf7f86d69d9385c2",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "2",
+     "name": "3V3",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "3",
+     "name": "EN",
+     "signal_name": "EN"
+    },
+    {
+     "pin_number": "4",
+     "name": "IO4",
+     "signal_name": "DI1"
+    },
+    {
+     "pin_number": "5",
+     "name": "IO5",
+     "signal_name": "DI2"
+    },
+    {
+     "pin_number": "6",
+     "name": "IO6",
+     "signal_name": "DI3"
+    },
+    {
+     "pin_number": "7",
+     "name": "IO7",
+     "signal_name": "DI4"
+    },
+    {
+     "pin_number": "8",
+     "name": "IO15",
+     "signal_name": "DI5"
+    },
+    {
+     "pin_number": "9",
+     "name": "IO16",
+     "signal_name": "DI6"
+    },
+    {
+     "pin_number": "10",
+     "name": "IO17",
+     "signal_name": "HMI_TX"
+    },
+    {
+     "pin_number": "11",
+     "name": "IO18",
+     "signal_name": "HMI_RX"
+    },
+    {
+     "pin_number": "12",
+     "name": "IO8",
+     "signal_name": "WDT_KICK"
+    },
+    {
+     "pin_number": "13",
+     "name": "IO19",
+     "signal_name": "USB_DM"
+    },
+    {
+     "pin_number": "14",
+     "name": "IO20",
+     "signal_name": "USB_DP"
+    },
+    {
+     "pin_number": "15",
+     "name": "IO3",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "16",
+     "name": "IO46",
+     "signal_name": "MCP_INT"
+    },
+    {
+     "pin_number": "17",
+     "name": "IO9",
+     "signal_name": "ADS_DRDY"
+    },
+    {
+     "pin_number": "18",
+     "name": "IO10",
+     "signal_name": "SPI_CS_ADC"
+    },
+    {
+     "pin_number": "19",
+     "name": "IO11",
+     "signal_name": "SPI_MOSI"
+    },
+    {
+     "pin_number": "20",
+     "name": "IO12",
+     "signal_name": "SPI_SCK"
+    },
+    {
+     "pin_number": "21",
+     "name": "IO13",
+     "signal_name": "SPI_MISO"
+    },
+    {
+     "pin_number": "22",
+     "name": "IO14",
+     "signal_name": "SD_CS"
+    },
+    {
+     "pin_number": "23",
+     "name": "IO21",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "24",
+     "name": "IO47",
+     "signal_name": "RS485_TX"
+    },
+    {
+     "pin_number": "25",
+     "name": "IO48",
+     "signal_name": "RS485_RX"
+    },
+    {
+     "pin_number": "26",
+     "name": "IO45",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "27",
+     "name": "IO0",
+     "signal_name": "BOOT"
+    },
+    {
+     "pin_number": "28",
+     "name": "IO35",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "29",
+     "name": "IO36",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "30",
+     "name": "IO37",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "31",
+     "name": "IO38",
+     "signal_name": "I2C_SDA"
+    },
+    {
+     "pin_number": "32",
+     "name": "IO39",
+     "signal_name": "I2C_SCL"
+    },
+    {
+     "pin_number": "33",
+     "name": "IO40",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "34",
+     "name": "IO41",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "35",
+     "name": "IO42",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "36",
+     "name": "RXD0",
+     "signal_name": "UART0_RX"
+    },
+    {
+     "pin_number": "37",
+     "name": "TXD0",
+     "signal_name": "UART0_TX"
+    },
+    {
+     "pin_number": "38",
+     "name": "IO2",
+     "signal_name": "GATE_CURR_L"
+    },
+    {
+     "pin_number": "39",
+     "name": "IO1",
+     "signal_name": "GATE_CURR_R"
+    },
+    {
+     "pin_number": "40",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "41",
+     "name": "GND",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C1",
+   "value": "10uF",
+   "block_name": "Decoupling",
+   "search_query": "10uF",
+   "part_uuid": "8c1f4a9e9d204b148b36ce719c891bd1",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C2",
+   "value": "100nF",
+   "block_name": "Decoupling",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C3",
+   "value": "100nF",
+   "block_name": "Decoupling",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C4",
+   "value": "100nF",
+   "block_name": "Decoupling",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "R1",
+   "value": "10k",
+   "block_name": "Reset/Boot",
+   "search_query": "10k 0402",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "EN"
+    }
+   ]
+  },
+  {
+   "designator": "C5",
+   "value": "100nF",
+   "block_name": "Reset/Boot",
+   "search_query": "100nF 0402",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "EN"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "SW1",
+   "value": "RESET",
+   "block_name": "Reset/Boot",
+   "search_query": "TS-1187A-B-A-B",
+   "part_uuid": "9b1d934c3e3a4920af227bab22a915b2",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "A",
+     "signal_name": "EN"
+    },
+    {
+     "pin_number": "2",
+     "name": "B",
+     "signal_name": "EN"
+    },
+    {
+     "pin_number": "3",
+     "name": "C",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "D",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "R2",
+   "value": "10k",
+   "block_name": "Reset/Boot",
+   "search_query": "10k 0402",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "BOOT"
+    }
+   ]
+  },
+  {
+   "designator": "SW2",
+   "value": "BOOT",
+   "block_name": "Reset/Boot",
+   "search_query": "TS-1187A-B-A-B",
+   "part_uuid": "9b1d934c3e3a4920af227bab22a915b2",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "A",
+     "signal_name": "BOOT"
+    },
+    {
+     "pin_number": "2",
+     "name": "B",
+     "signal_name": "BOOT"
+    },
+    {
+     "pin_number": "3",
+     "name": "C",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "D",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J1",
+   "value": "USB-C 16P",
+   "block_name": "USB",
+   "search_query": "TYPE-C-31-M-12",
+   "part_uuid": "74d31c19993b4b9581f3175a7da4b280",
+   "pins": [
+    {
+     "pin_number": "A1B12",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "B1A12",
+     "name": "GND",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "A4B9",
+     "name": "VBUS",
+     "signal_name": "USB_VBUS"
+    },
+    {
+     "pin_number": "B4A9",
+     "name": "VBUS",
+     "signal_name": "USB_VBUS"
+    },
+    {
+     "pin_number": "A5",
+     "name": "CC1",
+     "signal_name": "CC1"
+    },
+    {
+     "pin_number": "B5",
+     "name": "CC2",
+     "signal_name": "CC2"
+    },
+    {
+     "pin_number": "A6",
+     "name": "DP1",
+     "signal_name": "USB_DP"
+    },
+    {
+     "pin_number": "B6",
+     "name": "DP2",
+     "signal_name": "USB_DP"
+    },
+    {
+     "pin_number": "A7",
+     "name": "DN1",
+     "signal_name": "USB_DM"
+    },
+    {
+     "pin_number": "B7",
+     "name": "DN2",
+     "signal_name": "USB_DM"
+    },
+    {
+     "pin_number": "B8",
+     "name": "SBU2",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "A8",
+     "name": "SBU1",
+     "signal_name": ""
+    },
+    {
+     "pin_number": "1",
+     "name": "EH",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "2",
+     "name": "EH",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "EH",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "EH",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "R3",
+   "value": "5.1k",
+   "block_name": "USB",
+   "search_query": "5.1k 0402",
+   "part_uuid": "ef1f93374e0c4079b48a2d1a3cec8f6b",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "CC1"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "R4",
+   "value": "5.1k",
+   "block_name": "USB",
+   "search_query": "5.1k 0402",
+   "part_uuid": "ef1f93374e0c4079b48a2d1a3cec8f6b",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "CC2"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U2",
+   "value": "USBLC6-2SC6",
+   "block_name": "USB",
+   "search_query": "USBLC6-2SC6",
+   "part_uuid": "41567551402d47e3a0236ab3d895b322",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "USB_DM"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "USB_DP"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "USB_DP"
+    },
+    {
+     "pin_number": "5",
+     "name": "5",
+     "signal_name": "USB_VBUS"
+    },
+    {
+     "pin_number": "6",
+     "name": "6",
+     "signal_name": "USB_DM"
+    }
+   ]
+  }
+ ]
+}

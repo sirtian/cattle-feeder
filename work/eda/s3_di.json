@@ -1,0 +1,798 @@
+{
+ "add_components": [
+  {
+   "designator": "U10",
+   "value": "EL357N",
+   "block_name": "Input1-4",
+   "search_query": "EL357N",
+   "part_uuid": "3066d5c28e5f464690594bbe4ef94874",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "OPTO_A1"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "DI1"
+    }
+   ]
+  },
+  {
+   "designator": "R10",
+   "value": "2.2k",
+   "block_name": "Input1-4",
+   "search_query": "2.2k",
+   "part_uuid": "a5af5fd5005a45819ff0ab771881db3d",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN1"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "OPTO_A1"
+    }
+   ]
+  },
+  {
+   "designator": "R18",
+   "value": "10k",
+   "block_name": "Input1-4",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "DI1"
+    }
+   ]
+  },
+  {
+   "designator": "C10",
+   "value": "100nF",
+   "block_name": "Input1-4",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DI1"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U11",
+   "value": "EL357N",
+   "block_name": "Input1-4",
+   "search_query": "EL357N",
+   "part_uuid": "3066d5c28e5f464690594bbe4ef94874",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "OPTO_A2"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "DI2"
+    }
+   ]
+  },
+  {
+   "designator": "R11",
+   "value": "2.2k",
+   "block_name": "Input1-4",
+   "search_query": "2.2k",
+   "part_uuid": "a5af5fd5005a45819ff0ab771881db3d",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN2"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "OPTO_A2"
+    }
+   ]
+  },
+  {
+   "designator": "R19",
+   "value": "10k",
+   "block_name": "Input1-4",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "DI2"
+    }
+   ]
+  },
+  {
+   "designator": "C11",
+   "value": "100nF",
+   "block_name": "Input1-4",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DI2"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U12",
+   "value": "EL357N",
+   "block_name": "Input1-4",
+   "search_query": "EL357N",
+   "part_uuid": "3066d5c28e5f464690594bbe4ef94874",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "OPTO_A3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "DI3"
+    }
+   ]
+  },
+  {
+   "designator": "R12",
+   "value": "2.2k",
+   "block_name": "Input1-4",
+   "search_query": "2.2k",
+   "part_uuid": "a5af5fd5005a45819ff0ab771881db3d",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "OPTO_A3"
+    }
+   ]
+  },
+  {
+   "designator": "R20",
+   "value": "10k",
+   "block_name": "Input1-4",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "DI3"
+    }
+   ]
+  },
+  {
+   "designator": "C12",
+   "value": "100nF",
+   "block_name": "Input1-4",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DI3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U13",
+   "value": "EL357N",
+   "block_name": "Input1-4",
+   "search_query": "EL357N",
+   "part_uuid": "3066d5c28e5f464690594bbe4ef94874",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "OPTO_A4"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "DI4"
+    }
+   ]
+  },
+  {
+   "designator": "R13",
+   "value": "2.2k",
+   "block_name": "Input1-4",
+   "search_query": "2.2k",
+   "part_uuid": "a5af5fd5005a45819ff0ab771881db3d",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN4"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "OPTO_A4"
+    }
+   ]
+  },
+  {
+   "designator": "R21",
+   "value": "10k",
+   "block_name": "Input1-4",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "DI4"
+    }
+   ]
+  },
+  {
+   "designator": "C13",
+   "value": "100nF",
+   "block_name": "Input1-4",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DI4"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U14",
+   "value": "EL357N",
+   "block_name": "Input5-8",
+   "search_query": "EL357N",
+   "part_uuid": "3066d5c28e5f464690594bbe4ef94874",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "OPTO_A5"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "DI5"
+    }
+   ]
+  },
+  {
+   "designator": "R14",
+   "value": "2.2k",
+   "block_name": "Input5-8",
+   "search_query": "2.2k",
+   "part_uuid": "a5af5fd5005a45819ff0ab771881db3d",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN5"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "OPTO_A5"
+    }
+   ]
+  },
+  {
+   "designator": "R22",
+   "value": "10k",
+   "block_name": "Input5-8",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "DI5"
+    }
+   ]
+  },
+  {
+   "designator": "C14",
+   "value": "100nF",
+   "block_name": "Input5-8",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DI5"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U15",
+   "value": "EL357N",
+   "block_name": "Input5-8",
+   "search_query": "EL357N",
+   "part_uuid": "3066d5c28e5f464690594bbe4ef94874",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "OPTO_A6"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "DI6"
+    }
+   ]
+  },
+  {
+   "designator": "R15",
+   "value": "2.2k",
+   "block_name": "Input5-8",
+   "search_query": "2.2k",
+   "part_uuid": "a5af5fd5005a45819ff0ab771881db3d",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN6"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "OPTO_A6"
+    }
+   ]
+  },
+  {
+   "designator": "R23",
+   "value": "10k",
+   "block_name": "Input5-8",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "DI6"
+    }
+   ]
+  },
+  {
+   "designator": "C15",
+   "value": "100nF",
+   "block_name": "Input5-8",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "DI6"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U16",
+   "value": "EL357N",
+   "block_name": "Input5-8",
+   "search_query": "EL357N",
+   "part_uuid": "3066d5c28e5f464690594bbe4ef94874",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "OPTO_A7"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "MCP_DI7"
+    }
+   ]
+  },
+  {
+   "designator": "R16",
+   "value": "2.2k",
+   "block_name": "Input5-8",
+   "search_query": "2.2k",
+   "part_uuid": "a5af5fd5005a45819ff0ab771881db3d",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN7"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "OPTO_A7"
+    }
+   ]
+  },
+  {
+   "designator": "R24",
+   "value": "10k",
+   "block_name": "Input5-8",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "MCP_DI7"
+    }
+   ]
+  },
+  {
+   "designator": "C16",
+   "value": "100nF",
+   "block_name": "Input5-8",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "MCP_DI7"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "U17",
+   "value": "EL357N",
+   "block_name": "Input5-8",
+   "search_query": "EL357N",
+   "part_uuid": "3066d5c28e5f464690594bbe4ef94874",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "OPTO_A8"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "GND"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "MCP_DI8"
+    }
+   ]
+  },
+  {
+   "designator": "R17",
+   "value": "2.2k",
+   "block_name": "Input5-8",
+   "search_query": "2.2k",
+   "part_uuid": "a5af5fd5005a45819ff0ab771881db3d",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN8"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "OPTO_A8"
+    }
+   ]
+  },
+  {
+   "designator": "R25",
+   "value": "10k",
+   "block_name": "Input5-8",
+   "search_query": "10k",
+   "part_uuid": "c3b9baa5ef2e4070a4c0f9e9cd04fe6e",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "3V3"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "MCP_DI8"
+    }
+   ]
+  },
+  {
+   "designator": "C17",
+   "value": "100nF",
+   "block_name": "Input5-8",
+   "search_query": "100nF",
+   "part_uuid": "87bb635d0b2f489a9f60e7cd225beb3c",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "MCP_DI8"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J10",
+   "value": "KF128-5P",
+   "block_name": "Input1-4",
+   "search_query": "KF128-5P",
+   "part_uuid": "34674860561a4d799c5c1cd606cb08eb",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN1"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "IN2"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "IN3"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "IN4"
+    },
+    {
+     "pin_number": "5",
+     "name": "5",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "J11",
+   "value": "KF128-5P",
+   "block_name": "Input5-8",
+   "search_query": "KF128-5P",
+   "part_uuid": "34674860561a4d799c5c1cd606cb08eb",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "IN5"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "IN6"
+    },
+    {
+     "pin_number": "3",
+     "name": "3",
+     "signal_name": "IN7"
+    },
+    {
+     "pin_number": "4",
+     "name": "4",
+     "signal_name": "IN8"
+    },
+    {
+     "pin_number": "5",
+     "name": "5",
+     "signal_name": "24V_P"
+    }
+   ]
+  },
+  {
+   "designator": "D10",
+   "value": "SMBJ33A",
+   "block_name": "Field Power",
+   "search_query": "SMBJ33A",
+   "part_uuid": "590adfde073642e28b76da2960491d44",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "C",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "A",
+     "signal_name": "GND"
+    }
+   ]
+  },
+  {
+   "designator": "C18",
+   "value": "10uF/50V",
+   "block_name": "Field Power",
+   "search_query": "10uF/50V",
+   "part_uuid": "8975ca809f0a4ae28e823144c6e9c898",
+   "pins": [
+    {
+     "pin_number": "1",
+     "name": "1",
+     "signal_name": "24V_P"
+    },
+    {
+     "pin_number": "2",
+     "name": "2",
+     "signal_name": "GND"
+    }
+   ]
+  }
+ ]
+}

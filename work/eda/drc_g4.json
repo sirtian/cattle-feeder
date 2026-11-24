@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Clearance Error",
+    "violation_count": 6,
+    "list": [
+      {
+        "name": "SMD Pad to Track",
+        "violation_count": 5,
+        "list": [
+          {
+            "obj1": "(GND): e3715",
+            "obj2": "(USB_DP): U4_3",
+            "message": "Object 1 to object 2 distance is 3.1mil, should be >= 5.1mil",
+            "primitive_ids": [
+              "2c4d568bfcede0b8",
+              "7f189ad019b517a2e9"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(GND): e3716",
+            "obj2": "(USB_DP): U4_3",
+            "message": "Object 1 to object 2 distance is 3.1mil, should be >= 5.1mil",
+            "primitive_ids": [
+              "de9ba88c04daa86c",
+              "7f189ad019b517a2e9"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(GND): e3717",
+            "obj2": "(USB_DP): U4_3",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5.1mil",
+            "primitive_ids": [
+              "1c2198353b740eb2",
+              "7f189ad019b517a2e9"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(GND): e3718",
+            "obj2": "(USB_DP): U4_3",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5.1mil",
+            "primitive_ids": [
+              "d0dde683277260d0",
+              "7f189ad019b517a2e9"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(GND): e3719",
+            "obj2": "(USB_DP): U4_3",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5.1mil",
+            "primitive_ids": [
+              "ae62a06b2d39fcb3",
+              "7f189ad019b517a2e9"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "Track to Via",
+        "violation_count": 1,
+        "list": [
+          {
+            "obj1": "(GND): e3744",
+            "obj2": "(AIN0_F): e1677",
+            "message": "Object 1 to object 2 distance is 5mil, should be >= 5.1mil",
+            "primitive_ids": [
+              "9dc16ad44c3b0055",
+              "faf5f1bcab59f559"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Connection Error",
+    "violation_count": 6,
+    "list": [
+      {
+        "name": "GND",
+        "violation_count": 6,
+        "list": [
+          {
+            "obj1": "(GND): U37_3",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "dbdac3bfaf0639ffe62"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U37_5",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "dbdac3bfaf0639ffe64"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U37_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "dbdac3bfaf0639ffe61"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e-1",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "bb58f69c0e9df68b"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U33_17",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "d222a9a4cb6284e3e85"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U33_10",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "d222a9a4cb6284e3e69"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      }
+    ]
+  }
+]

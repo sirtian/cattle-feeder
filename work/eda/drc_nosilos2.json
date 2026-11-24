@@ -1,0 +1,260 @@
+[
+  {
+    "name": "Clearance Error",
+    "violation_count": 8,
+    "list": [
+      {
+        "name": "SMD Pad to TH Pad",
+        "violation_count": 1,
+        "list": [
+          {
+            "obj1": "(GND): C1_2",
+            "obj2": ": e5",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "774ed45f71984337e9",
+              "4da14b9722521f76"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "Hole to Hole",
+        "violation_count": 4,
+        "list": [
+          {
+            "obj1": ": e10",
+            "obj2": ": e14",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "eeffb278153e5684",
+              "dad171fd49dff3da"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          },
+          {
+            "obj1": ": e11",
+            "obj2": ": e15",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "951419ceb5ecae09",
+              "33299b7e09969a95"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          },
+          {
+            "obj1": ": e12",
+            "obj2": ": e8",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "fac132f71571a6b1",
+              "5f450bab454a1933"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          },
+          {
+            "obj1": ": e13",
+            "obj2": ": e9",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 11.8mil",
+            "primitive_ids": [
+              "d7167980c8492f67",
+              "90abddbd126e07bd"
+            ],
+            "rule_name": "otherClearance",
+            "layer": "Multi-Layer"
+          }
+        ]
+      },
+      {
+        "name": "TH Pad to TH Pad",
+        "violation_count": 2,
+        "list": [
+          {
+            "obj1": "(24V_P): K15_1",
+            "obj2": ": e0",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "17ca1935c099cd26e26",
+              "14a72dd39908ce89"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          },
+          {
+            "obj1": "(COIL2_2): K15_2",
+            "obj2": ": e0",
+            "message": "Object 1 to object 2 distance is 0mil, should be >= 5mil",
+            "primitive_ids": [
+              "17ca1935c099cd26e27",
+              "14a72dd39908ce89"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      },
+      {
+        "name": "Hole to TH Pad",
+        "violation_count": 1,
+        "list": [
+          {
+            "obj1": "(COIL2_2): K15_2",
+            "obj2": ": e0",
+            "message": "Object 1 to object 2 distance is 4.2mil, should be >= 5mil",
+            "primitive_ids": [
+              "17ca1935c099cd26e27",
+              "14a72dd39908ce89"
+            ],
+            "rule_name": "copilot_router_net_0_spacing",
+            "layer": "Top Layer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Connection Error",
+    "violation_count": 16,
+    "list": [
+      {
+        "name": "GND",
+        "violation_count": 16,
+        "list": [
+          {
+            "obj1": "(GND): U37_3",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "dbdac3bfaf0639ffe62"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U37_5",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "dbdac3bfaf0639ffe64"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e6223",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "4c083bf3a2761dd6"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U37_17",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "dbdac3bfaf0639ffe85"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e5896",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "ec1a14e2ffe46a84"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): C80_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "f3db4df1833d9a5de17"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): C86_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "536b02ff348da413e17"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): C8_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "92bc4950d5a2bde8e17"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e5966",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "c79a5a5c23ed4589"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U40_22",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "7f43c921c8189444e30"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e6262",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "396a5c56c3d15e21"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): R11_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "ad6355daccc42f8be12"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e6257",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "e6d12b711a2019cf"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): C13_2",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "7e0f59fc6fdcc700e17"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): e5964",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "50ef90866c45f19b"
+            ],
+            "rule_name": "Common"
+          },
+          {
+            "obj1": "(GND): U33_10",
+            "message": "Object 1 is disconnected from other objects of the same network",
+            "primitive_ids": [
+              "d222a9a4cb6284e3e69"
+            ],
+            "rule_name": "Common"
+          }
+        ]
+      }
+    ]
+  }
+]
